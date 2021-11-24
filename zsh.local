@@ -177,25 +177,6 @@ function rsync-to-cafanistan-from-local() {
 	fi
 }
 
-#function rclone-from-local-to-cafanistan() {
-
-#- Copy file or directory from local source to remote destination:
-#	if [ -z "$1" ] && [ -z "$2" ]; then
-#		echo 'gotta include path to local file you wanna upload'
-#	else
-#		rclone copy $1 pi@192.168.1.232:$2
-#	fi
-#}
-
-#function rclone-from-cafanistan() {
-#	if [[ -z "$1" ]]; then
-#		echo 'gotta include path to  file you wanna copy'
-##	else
-#	#- Copy file or directory from remote source to local destination:
-#		rclone copy pi@192.168.1.232:"$1" .
-#	fi
-#}
-
 function ip_show_my_public() {
 	myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 	echo "My WAN/Public IP address: ${myip}"
@@ -235,12 +216,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 # NOTES
 ##########################
 
-# in ~/.zshrc
-
-#plugins (
-#  zsh-syntax-highlighting,
-#  web-search,
-#  alias-tips
-#  z
-#  common-aliases
-#)
+# sourced  in ~/.zshrc
+# plugins=(web-search z fd zsh-syntax-highlighting common-aliases)
