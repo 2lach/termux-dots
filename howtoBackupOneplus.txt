@@ -1,0 +1,3 @@
+öppna switch appen
+välj backup.& restore
+finns sen i manager > storage > opbackup > mobilebackup
