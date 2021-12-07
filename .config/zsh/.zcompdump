@@ -1997,5 +1997,5 @@ autoload -Uz +X _call_program
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
-#omz revision: 15fd9c84deae400ba52451d75548fb8f6ec26bcf
+#omz revision: 841f3cb0bb7663fa1062ffc59acb7b4581dc1d0f
 #omz fpath: /data/data/com.termux/files/home/z-stuff/plugins/common-aliases /data/data/com.termux/files/home/z-stuff/plugins/zsh-syntax-highlighting /data/data/com.termux/files/home/z-stuff/plugins/fd /data/data/com.termux/files/home/z-stuff/plugins/z /data/data/com.termux/files/home/z-stuff/plugins/web-search /data/data/com.termux/files/home/.oh-my-zsh/functions /data/data/com.termux/files/home/.oh-my-zsh/completions /data/data/com.termux/files/home/.oh-my-zsh/cache/completions /data/data/com.termux/files/usr/share/zsh/site-functions /data/data/com.termux/files/usr/share/zsh/5.8/functions

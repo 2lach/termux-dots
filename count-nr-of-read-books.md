@@ -17,3 +17,6 @@ Oct 21 2021
 
 Wed Nov 3 20:40:09 CET 2021
 139 - 23 - 22 = 94
+
+count lines in file exclude newline & comments
+cat z-stuff/books2021.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l

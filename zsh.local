@@ -10,8 +10,8 @@ alias g="git"
 alias c="clear"
 alias e="exit"
 alias qq="exit"
-alias mkd="mkdir -v"
-alias catt="bat --style=plain --pager=never"
+ alias mkd="mkdir -v"
+alias catt="bat --style=plain --theme='ansi' -n --pager=never"
 
 ## LIST
 alias ls='ls -A '
@@ -87,10 +87,21 @@ function feco() {
 	echo ""
 }
 
+function aptu() {
+	feco "apt-get update"
+	apt-get update
+
+	feco "apt-get upgrade"
+	apt-get upgrade -y
+
+	feco "apt-get autoclean & purge"
+	apt-get autoclean && apt-get purge
+}
+
 function system_update() {
 
 	feco "APT UPDATE"
-	aptu
+	apt update && apt upgrade -y
 
 	feco "APT-GET UPGRADE"
 	apt-get dist-upgrade -y && apt-get upgrade -y
@@ -118,17 +129,7 @@ function system_update() {
 
 	local date="/data/data/com.termux/files/usr/bin/date"
 	(echo "system updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
-}
 
-function aptu() {
-	feco "apt-get update"
-	apt-get update
-
-	feco "apt-get upgrade"
-	apt-get upgrade -y
-
-	feco "apt-get autoclean & purge"
-	apt-get autoclean && apt-get purge
 }
 
 # Get colors in manual pages
@@ -182,8 +183,8 @@ function ip_show_my_public() {
 	echo "My WAN/Public IP address: ${myip}"
 }
 
-function convert-mkv-to-mp4 () {
-        ffmpeg -i "$1" -acodec ac3 -vcodec copy "$2"
+function convert-mkv-to-mp4() {
+	ffmpeg -i "$1" -acodec ac3 -vcodec copy "$2"
 }
 
 ##########################
