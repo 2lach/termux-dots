@@ -10,7 +10,7 @@ alias g="git"
 alias c="clear"
 alias e="exit"
 alias qq="exit"
- alias mkd="mkdir -v"
+alias mkd="mkdir -v"
 alias catt="bat --style=plain --theme='ansi' -n --pager=never"
 
 ## LIST
@@ -37,6 +37,7 @@ alias gcm="git commit -m"
 alias shellformat="shfmt" # requires pkg 'shfmt'
 alias pip-search="pip_search"
 alias npm-list-globals="npm list -g --depth=0"
+alias todo="todo.sh"
 
 # OMZ
 alias edit-zshrc="vim ~/.zshrc"
@@ -126,9 +127,8 @@ function system_update() {
 	omz update
 
 	feco "UPDATE SYSTEM COMPLETE"
-
 	local date="/data/data/com.termux/files/usr/bin/date"
-	(echo "system updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
+(echo "System updated" | lolcat && $date && echo "") >> /data/data/com.termux/files/home/z-stuff/system_updated.txt
 
 }
 
@@ -187,6 +187,10 @@ function convert-mkv-to-mp4() {
 	ffmpeg -i "$1" -acodec ac3 -vcodec copy "$2"
 }
 
+function count-books(){
+cat $HOME/z-stuff/books2021.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
+}
+
 ##########################
 # SYSTEM TWEAKS
 ##########################
@@ -209,8 +213,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/scripts/pip-comp.zsh
 . $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/paths.sh
-. <(caniuse --completion)
-
+. $HOME/z-stuff/scripts/.secrets
 #. $HOME/z-stuff/greetings.sh
 
 ##########################
