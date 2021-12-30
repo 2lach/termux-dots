@@ -33,17 +33,25 @@
 #   - 'ignore' :: cod will ignore all command for this executable.
 
 # Examples:
-#   [[rule]]
-#   executable = "/usr/bin/*"
-#   policy = 'ignore'
-#
-#
+   [[rule]]
+   executable = "/data/data/com.termux/files/home/bin/*"
+   policy = "trust"
 
-# 
-#  - 'trust'  :: cod will automatically learn detected help command;
-#
-#   trust all in *bins
-#
+# Examples:
+   [[rule]]
+   executable = "/usr/local/bin/*"
+   policy = "trust"
+
+# Examples:
+   [[rule]]
+   executable = "/data/data/com.termux/files/usr/bin/*"
+   policy = "trust"
+
+# Examples:
+   [[rule]]
+   executable = "/data/data/com.termux/files/home/go/bin/*"
+   policy = "trust"
+
    [[rule]]
    executable = "/data/data/com.termux/files/usr/bin/*"
    policy = 'trust'
