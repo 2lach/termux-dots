@@ -1,5 +1,5 @@
 .config/Bitwarden CLI/
-.config/configstore/
+.config/configstore/*
 .config/gh/
 .config/netlify/
 .config/pi/
@@ -7,6 +7,7 @@
 .config/todo.sh/
 .config/zsh/
 .ideas
+.oh-my-zsh
 scripts/.secrets
 z-stuff/plugins/common-aliases/README.md 
 z-stuff/plugins/web-search/README.md 
