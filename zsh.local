@@ -203,6 +203,8 @@ setopt hist_ignore_all_dups
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
+# start ssh-agent
+eval "$(ssh-agent -s)"
 ##########################
 # SOURCE
 # PLUGINS/SCRIPTS
