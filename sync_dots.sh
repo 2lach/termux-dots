@@ -16,7 +16,7 @@ for i in "${folders[@]}"; do
   sync "$i"
 done
 
-declare -a files=(".gitconfig" ".gitignore" ".hushlogin" "z-stuff/books2021.txt" "z-stuff/count-nr-of-read-books.md" "z-stuff/paths.sh" "z-stuff/zsh.local")
+declare -a files=(".gitconfig" ".gitignore" ".hushlogin" "z-stuff/books2022.txt" "z-stuff/count-nr-of-read-books.md" "z-stuff/paths.sh" "z-stuff/zsh.local")
 
 for i in "${files[@]}"; do
   echo "sync files: $i"

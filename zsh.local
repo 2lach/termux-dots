@@ -154,7 +154,7 @@ function howdoi() {
 }
 
 function add-new_book() {
-	vim $HOME/z-stuff/books2021.txt
+	vim $HOME/z-stuff/books2022.txt
 }
 
 function ssh-to-cafanistan() {
