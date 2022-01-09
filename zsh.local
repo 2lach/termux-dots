@@ -33,7 +33,6 @@ alias gc="git commit"
 alias gcm="git commit -m"
 
 # MISC
-# alias tetris="bastet"     # requires pkg 'bastet'
 alias shellformat="shfmt" # requires pkg 'shfmt'
 alias pip-search="pip_search"
 alias npm-list-globals="npm list -g --depth=0"
@@ -123,8 +122,8 @@ function system_update() {
 	gem update
 	gem cleanup
 
-	feco "UPDATE OMZ"
-	omz update
+#	feco "UPDATE OMZ"
+#	omz update
 
 	feco "UPDATE SYSTEM COMPLETE"
 	local date="/data/data/com.termux/files/usr/bin/date"
@@ -157,8 +156,8 @@ function add-new_book() {
 	vim $HOME/z-stuff/books2022.txt
 }
 
-function ssh-to-cafanistan() {
-	ssh pi@192.168.1.232
+function ssh-cafanistan(){
+  ssha openmediavault
 }
 
 function rsync-from-cafanistan() {
@@ -188,39 +187,29 @@ function convert-mkv-to-mp4() {
 }
 
 function count-books(){
-cat $HOME/z-stuff/books2021.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
+cat $HOME/z-stuff/books2022.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
 }
 
 ##########################
 # SYSTEM TWEAKS
 ##########################
 
-export LOGNAME="Z"
-export USERNAME="$LOGNAME"
-
 # a new command line being added to the history list duplicates an older one, the older command is removed from the list (even if it is not the previous event
 setopt hist_ignore_all_dups
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
-# start ssh-agent
-eval "$(ssh-agent -s)"
 ##########################
 # SOURCE
 # PLUGINS/SCRIPTS
 # PATH/COMPLETIONS
 ##########################
 
-. $HOME/z-stuff/scripts/auto-ls.zsh
-. $HOME/z-stuff/scripts/pip-comp.zsh
-. $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/paths.sh
+. $HOME/z-stuff/scripts/auto-ls.zsh
 . $HOME/z-stuff/scripts/.secrets
-#. $HOME/z-stuff/greetings.sh
+. $HOME/z-stuff/plugins/*/*.plugin.zsh
+
+# . $HOME/z-stuff/scripts/greetings.sh
 
 ##########################
-# NOTES
-##########################
-
-# sourced  in ~/.zshrc
-# plugins=(web-search z fd zsh-syntax-highlighting common-aliases)

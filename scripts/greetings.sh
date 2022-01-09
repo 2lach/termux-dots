@@ -23,9 +23,9 @@ case "$RANDOM_NR" in
 	;;
 esac
 
-if (($RANDOM_NR < 5)); then
+if (($RANDOM_NR < 3)); then
 	figlet -w $(tput cols) -c -f $FIG_FONT "SwL" | lolcat
-elif (($RANDOM_NR > 5 && $RANDOM_NR < 9)); then
+elif (($RANDOM_NR > 3 && $RANDOM_NR < 9)); then
 	$uptime | lolcat -3
 else
 	$fortune
