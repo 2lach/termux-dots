@@ -9,14 +9,14 @@ function sync() {
 
 # Folders
 
-declare -a folders=(".config" ".oh-my-zsh" ".termux" "z-stuff/plugin" "z-stuff/scripts")
+declare -a folders=(".config" ".termux" "z-stuff/plugins" "z-stuff/scripts" "z-stuff/completions" "z-stuff/notes")
 
 for i in "${folders[@]}"; do
   echo "syncing folder: $i"
   sync "$i"
 done
 
-declare -a files=(".gitconfig" ".gitignore" ".hushlogin" "z-stuff/books2022.txt" "z-stuff/count-nr-of-read-books.md" "z-stuff/paths.sh" "z-stuff/zsh.local")
+declare -a files=(".gitconfig" ".hushlogin" "z-stuff/books2022.txt" "z-stuff/paths.sh" "z-stuff/zsh.local")
 
 for i in "${files[@]}"; do
   echo "sync files: $i"
