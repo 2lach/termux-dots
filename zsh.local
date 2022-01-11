@@ -164,7 +164,8 @@ function rsync-from-cafanistan() {
 	if [[ -z $1 ]]; then
 		echo 'gotta include path to directory you wanna dl'
 	else
-		rsync -r --info=progress pi@192.168.1.232:$1 .
+		rsync -r --info=progress pi@$CAFANISTAN:$1 .
+
 	fi
 }
 
@@ -173,7 +174,7 @@ function rsync-to-cafanistan-from-local() {
 		echo 'gotta include path to local file you wanna upload'
 	else
 		# rsync path/to/local_file remote_host:path/to/remote_directory
-		rsync -r --info=progress2 $1 pi@192.168.1.232:$2
+		rsync -r --info=progress2 $1 pi@$CAFANISTAN:$2
 	fi
 }
 
