@@ -98,6 +98,13 @@ function aptu() {
 	apt-get autoclean && apt-get purge
 }
 
+function compress() {
+  # run with the pigz...
+  printf " 🗜 making $1.tar.gz"
+  [ -n "$1" ] && tar cf - "$1" | pigz -9 -p 32 >"$1".tar.gz && printf "\n parrallel gzip (🐷igz) finished"
+}
+
+
 function system_update() {
 
 	feco "APT UPDATE"
@@ -154,10 +161,6 @@ function howdoi() {
 
 function add-new_book() {
 	vim $HOME/z-stuff/books2022.txt
-}
-
-function ssh-cafanistan(){
-  ssha openmediavault
 }
 
 function rsync-from-cafanistan() {
