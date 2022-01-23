@@ -11,7 +11,7 @@ alias c="clear"
 alias e="exit"
 alias qq="exit"
 alias mkd="mkdir -v"
-alias catt="bat --style=plain --theme='ansi' -n --pager=never"
+alias bat="bat --style=plain --theme='ansi' -n --pager=never"
 
 ## LIST
 alias ls='ls -A '
@@ -22,7 +22,6 @@ alias lt='ls --tree'
 alias ls="ls -A"
 alias las="ls -lhA"
 alias lsa="exa -lah"
-alias duds="du -sh */ | sort -nr"
 
 # GIT
 alias gs="git status"
@@ -34,7 +33,6 @@ alias gcm="git commit -m"
 
 # MISC
 alias shellformat="shfmt" # requires pkg 'shfmt'
-alias pip-search="pip_search"
 alias npm-list-globals="npm list -g --depth=0"
 alias todo="todo.sh"
 
@@ -42,8 +40,32 @@ alias todo="todo.sh"
 alias edit-zshrc="vim ~/.zshrc"
 alias edit-zsh-local="vim $HOME/z-stuff/zsh.local"
 alias edit-ohmyzsh="vim ~/.oh-my-zsh"
+
+# PYTHON
 alias pip2="/data/data/com.termux/files/usr/bin/pip"
 alias pip="/data/data/com.termux/files/usr/bin/pip3"
+alias pip-search="pip_search"
+# pip_search -s name
+# pip_search -s version
+# pip_search -s released
+
+#alias pip='function _pip(){
+#if [ $1 = "search" ]; then
+#        pip_search "$2";
+#    else pip "$@";
+#    fi;
+#};_pip'
+
+function clamscan_start(){
+local fresh="/data/data/com.termux/files/usr/bin/freshclam"
+local clams="/data/data/com.termux/files/usr/bin/clamscan"
+
+echo "* freshclam"
+$fresh
+echo "* clamscan start"
+$clams --recursive .
+echo "* clamscan end"
+}
 
 ##########################
 # FUNCTIONS
@@ -63,7 +85,6 @@ function lst() {
 	else
 		lsd -AF --depth $1 --tree
 	fi
-
 }
 
 function acp() {
@@ -77,14 +98,20 @@ function dus() {
 	du -d 1 -h | sort -hr
 }
 
-function UPDATE_PIP_PKG() {
-	/data/data/com.termux/files/usr/bin/pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
+function duds(){
+  du -sh */ | sort -nr
 }
 
 function feco() {
 	echo ""
 	echo "|| $@ ||" | lolcat
 	echo ""
+}
+
+function compress() {
+  # run with the pigz...
+  printf " 🗜 making $1.tar.gz"
+  [ -n "$1" ] && tar cf - "$1" | pigz -9 -p 32 >"$1".tar.gz && printf "\n parrallel gzip (🐷igz) finished"
 }
 
 function aptu() {
@@ -94,32 +121,28 @@ function aptu() {
 	feco "apt-get upgrade"
 	apt-get upgrade -y
 
+	feco "apt-get dist upgrade"
+	apt-get dist-upgrade -y 
+
 	feco "apt-get autoclean & purge"
 	apt-get autoclean && apt-get purge
 }
 
-function compress() {
-  # run with the pigz...
-  printf " 🗜 making $1.tar.gz"
-  [ -n "$1" ] && tar cf - "$1" | pigz -9 -p 32 >"$1".tar.gz && printf "\n parrallel gzip (🐷igz) finished"
+function UPDATE_PIP_PKG() {
+ local pip="/data/data/com.termux/files/usr/bin/pip3"
+ $pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
 }
-
 
 function system_update() {
 
 	feco "APT UPDATE"
-	apt update && apt upgrade -y
-
-	feco "APT-GET UPGRADE"
-	apt-get dist-upgrade -y && apt-get upgrade -y
+  aptu
 
 	feco "PKG UPGRADE"
-	pkg update && pkg upgrade -y
+	pkg update && pkg upgrade -y && pkg autoclean
 
 	feco "AUTOCLEAN & PURGE"
 	apt-get autoclean && apt-get purge
-	pkg clean
-	apt clean
 
 	feco "UPDATE PIPS"
 	UPDATE_PIP_PKG
@@ -132,15 +155,16 @@ function system_update() {
 #	feco "UPDATE OMZ"
 #	omz update
 
-	feco "UPDATE SYSTEM COMPLETE"
-	local date="/data/data/com.termux/files/usr/bin/date"
+feco "UPDATE SYSTEM COMPLETE"
+local date="/data/data/com.termux/files/usr/bin/date"
 (echo "System updated" | lolcat && $date && echo "") >> /data/data/com.termux/files/home/z-stuff/system_updated.txt
 
 }
 
-# Get colors in manual pages
+
 man() {
-	env \
+# Get colors in manual pages
+env \
 		LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
 		LESS_TERMCAP_md="$(printf '\e[1;31m')" \
 		LESS_TERMCAP_me="$(printf '\e[0m')" \
@@ -168,15 +192,14 @@ function rsync-from-cafanistan() {
 		echo 'gotta include path to directory you wanna dl'
 	else
 		rsync -r --info=progress pi@$CAFANISTAN:$1 .
-
 	fi
 }
 
 function rsync-to-cafanistan-from-local() {
-	if [ -z "$1" ] && [ -z "$2" ]; then
+ # rsync path/to/local_file remote_host:path/to/remote
+ if [ -z "$1" ] && [ -z "$2" ]; then
 		echo 'gotta include path to local file you wanna upload'
 	else
-		# rsync path/to/local_file remote_host:path/to/remote_directory
 		rsync -r --info=progress2 $1 pi@$CAFANISTAN:$2
 	fi
 }

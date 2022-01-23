@@ -3,19 +3,16 @@
 
 # paths live in
 # /data/data/com.termux/files/home/.zshenv
-#
-# export ZSH=$HOME/.oh-my-zsh
-# export XDG_CONFIG_HOME="$HOME/.config"
-# export HISTFILE="$HOME/.config/zsh/.zsh_history"
-# export ZSH_COMPDUMP="$HOME/.config/zsh/.zcompdump"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# eval "$(starship init zsh)"
 # ZSH_THEME="refined"
 # ZSH_THEME="avit"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="mgutz"
 # ZSH_THEME="random" 
+
+# starship prompt (spaceship but in rust)
+eval "$(starship init zsh)"
 
 # Uncomment to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -97,9 +94,6 @@ source "$ZSH_CUSTOM/zsh.local"
 # cod completion daemon
 source <(cod init $$ zsh)
 
-# starship prompt (spaceship but in rust)
-eval "$(starship init zsh)"
-
 # lazy load bitwarden cli completion 
 bw() {
     unset -f bw
@@ -114,3 +108,6 @@ bw() {
 
 # uncomment to finish profiling
 # zprof
+
+
+[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh

@@ -4,6 +4,7 @@
 ## Peter Clines
   Terminus
   The Fold
+  14
 
 ## Daryl Gregory
   The Album of Dr. Moreau
@@ -18,3 +19,7 @@
   Exit Strategy, Book 4
   Network effect, Book 5
   Fugitive Telemetry, Book 6
+
+## Drew Hayes
+  Super Powereds, Year 1
+  Super Powereds, Year 2
