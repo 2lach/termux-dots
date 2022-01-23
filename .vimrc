@@ -1,5 +1,5 @@
 " ~l/.vimrc
-" 2lach 
+" 2lach
 " termux android zsh
 "set relativenumber
 
@@ -19,23 +19,40 @@ call plug#begin()
 Plug 'fugalh/desert.vim'
 Plug 'cocopon/iceberg.vim'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" neoformat
 Plug 'sbdchd/neoformat'
+
+" you complete me, autocompletion
+" https://github.com/ycm-core/YouCompleteMe
+" requires vim-python
+Plug 'ycm-core/YouCompleteMe'
+
+" https://github.com/moll/vim-node
+Plug 'moll/vim-node'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
-Plug 'preservim/nerdtree'
-
-" Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
+" filetree lazyload
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Initialize plugin system
 call plug#end()
 
+" Turn on filetype detection plugin and indent
+if exists(":filetype") == 2
+  filetype plugin indent on
+endif
 
-syntax enable
-colorscheme desert 
+" Always turn syntax highlighting on
+" should come after filetype plugin command
+if has("syntax")
+  syntax on
+endif
+
+colorscheme desert
 "evening dracula snazzy ron
 
 filetype on
@@ -177,9 +194,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " toogle with <Ctrl> + n
 map <C-n> :NERDTreeToggle<CR>
 
+"""""""""""""""""""""
+" === Airline==== "
+"""""""""""""""""""""
+"let g:airline_theme='<theme>', e.g. 
+let g:airline_theme='papercolor'
+let g:airline_extensions = []
 
-
-" from:
-" https://github.com/2lach/dotfiles-version-1/blob/master/linux/.vimrc
-"-----
 " vim:set ft=vim et sw=2:
