@@ -9,7 +9,7 @@
 # ZSH_THEME="avit"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="mgutz"
-# ZSH_THEME="random" 
+# ZSH_THEME="random"
 
 # starship prompt (spaceship but in rust)
 eval "$(starship init zsh)"
@@ -27,10 +27,9 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to automatically update without prompting
 DISABLE_UPDATE_PROMPT="true"
 
-# update interwall 
+# update interwall
 # omz update also included in system_update
 export UPDATE_ZSH_DAYS=400
-
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -80,7 +79,7 @@ export EDITOR='vim'
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='vim'
+        export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -88,17 +87,17 @@ fi
 
 # personal aliases, functions, scripts and stuff are managed in:
 source "$ZSH_CUSTOM/zsh.local"
-				
+
 # For a full list of active aliases, run `alias`.
 
 # cod completion daemon
 source <(cod init $$ zsh)
 
-# lazy load bitwarden cli completion 
+# lazy load bitwarden cli completion
 bw() {
-    unset -f bw
-		eval "$(bw completion --shell zsh); compdef _bw bw;"
-		bw "$@"
+        unset -f bw
+        eval "$(bw completion --shell zsh); compdef _bw bw;"
+        bw "$@"
 }
 
 # netlify completion
@@ -108,6 +107,5 @@ bw() {
 
 # uncomment to finish profiling
 # zprof
-
 
 [ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh

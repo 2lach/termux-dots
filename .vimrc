@@ -1,4 +1,4 @@
-" ~/.vimrc
+" ~l/.vimrc
 " 2lach 
 " termux android zsh
 "set relativenumber
@@ -19,7 +19,7 @@ call plug#begin()
 Plug 'fugalh/desert.vim'
 Plug 'cocopon/iceberg.vim'
 
-
+Plug 'sbdchd/neoformat'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
