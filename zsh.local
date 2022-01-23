@@ -21,7 +21,7 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias ls="ls -A"
 alias las="ls -lhA"
-alias lsa="exa -lah"
+alias lsa="exa --sort=type -alh"
 
 # GIT
 alias gs="git status"
