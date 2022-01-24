@@ -21,8 +21,10 @@ Plug 'cocopon/iceberg.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 " neoformat
 Plug 'sbdchd/neoformat'
+Plug 'machakann/vim-highlightedyank'
 
 " you complete me, autocompletion
 " https://github.com/ycm-core/YouCompleteMe
@@ -30,6 +32,7 @@ Plug 'sbdchd/neoformat'
 Plug 'ycm-core/YouCompleteMe'
 
 " https://github.com/moll/vim-node
+" vim-nodejs comp
 Plug 'moll/vim-node'
 
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -178,6 +181,7 @@ if has("autocmd")
 				autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
+
 """""""""""""""""""""
 " === NerdTREE ==== "
 """""""""""""""""""""
@@ -195,10 +199,30 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-n> :NERDTreeToggle<CR>
 
 """""""""""""""""""""
-" === Airline==== "
+" ===  Airline ==== "
 """""""""""""""""""""
-"let g:airline_theme='<theme>', e.g. 
-let g:airline_theme='papercolor'
+let g:airline_theme='google_dark' 
+" google_light papercolor
 let g:airline_extensions = []
 
+"""""""""""""""""""""""""""""""
+" === vim-highlightedyank === "
+"""""""""""""""""""""""""""""""
+if !exists('##TextYankPost')
+	map Y <Plug>(highlightedyank)
+	map y <Plug>(highlightedyank)
+endif
+
+let g:highlightedyank_highlight_duration = 550
+
+""""""""""""""""""""""""""""
+" === YOU COMPLETE ME  === "
+""""""""""""""""""""""""""""
+" change colors in ycm popup window
+highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000087
+
+" color charts for vim:
+" http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
+
+"""""""""""""""""""""""""""""""
 " vim:set ft=vim et sw=2:
