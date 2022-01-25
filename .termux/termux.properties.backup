@@ -8,14 +8,14 @@
 
 ### Settings for choosing which set of symbols to use for illustrating keys.
 ### Choose between default, arrows-only, arrows-all, all and none
-# extra-keys-style = dwfault 
+# extra-keys-style = default
 
 ### Default extra-key configuration
 # extra-keys = [[ESC, TAB, CTRL, ALT, {key: '-', popup: '|'}, DOWN, UP]]
 
 ### Two rows with more keys
-# extra-keys = [['ESC','/','-','HOME','UP','END','#'], \
-#               ['TAB','CTRL','_','LEFT','DOWN','RIGHT','@']]
+# extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'], \
+#               ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]
 
 ### Configuration with additional popup keys (swipe up from an extra key)
 # extra-keys = [[ \
@@ -92,7 +92,7 @@ back-key=back
 ###############
 
 ### Cursor blink rate. Values 0, 100 - 2000.
-# terminal-cursor-blink-rate=1000
+# terminal-cursor-blink-rate = 0
 
 ### Cursor style: block, bar, underline.
-terminal-cursor-style=underline
+# terminal-cursor-style = block
