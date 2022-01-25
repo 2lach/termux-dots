@@ -1,46 +1,29 @@
-" ~l/.vimrc
 " 2lach
 " termux android zsh
-"set relativenumber
 
-" Vimplug
-" https://github.com/junegunn/vim-plug
+" Vimplug | https://github.com/junegunn/vim-plug
 call plug#begin()
-
-" The default plugin directory will be as follows:
-"   - Vim (Linux/macOS): '~/.vim/plugged'
-
-" You can specify a custom plugin directory by passing it as the argument
-"   - e.g. `call plug#begin('~/.vim/plugged')`
-"   - Avoid using standard Vim directory names like 'plugin'
-" Make sure you use single quotes
-
 " Themes
 Plug 'fugalh/desert.vim'
 Plug 'cocopon/iceberg.vim'
 
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" neoformat
+" Format
 Plug 'sbdchd/neoformat'
+
+" Autocomplete
 Plug 'machakann/vim-highlightedyank'
-
-" you complete me, autocompletion
-" https://github.com/ycm-core/YouCompleteMe
-" requires vim-python
-Plug 'ycm-core/YouCompleteMe'
-
-" https://github.com/moll/vim-node
-" vim-nodejs comp
+Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
 Plug 'moll/vim-node'
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Shorthand notation
 Plug 'junegunn/vim-easy-align'
 
-" filetree lazyload
-Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
-
+" Vim filetree           | Lazyload
+Plug 'preservim/nerdtree',{ 'on':'NERDTreeToggle' }
 " Initialize plugin system
 call plug#end()
 
@@ -56,9 +39,7 @@ if has("syntax")
 endif
 
 colorscheme desert
-"evening dracula snazzy ron
 
-filetype on
 set termguicolors
 set t_Co=256
 
@@ -96,7 +77,6 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 				set undodir=~/.vim/undo
 endif
-
 " keep viminfo file in .vim dir
 set viminfo+=n~/.vim/viminfo
 
@@ -110,11 +90,10 @@ set modelines=4
 " Enable line numbers
 set number
 
-" Enable syntax highlighting
-syntax on
-
 " Highlight current line
-set cursorline
+set cursorline 
+ highlight Cursorline guibg=black
+" highlight CursorLine ctermfg=White ctermbg=Green cterm=bold guifg=none guibg=black gui=bold
 
 " Make tabs as wide as two spaces
 set tabstop=2
@@ -168,9 +147,6 @@ function! StripWhitespace()
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 
-" Save a file as root (,W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
 " Automatic commands
 if has("autocmd")
 				" Enable file type detection
@@ -179,8 +155,20 @@ if has("autocmd")
 				autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 				" Treat .md files as Markdown
 				autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-endif
+			endif
 
+" Cursor Mode Settings
+" let &t_SI.="\e[4 q" "SI = INSERT mode
+let &t_SR.="\e[3 q" "SR = REPLACE mode
+" let &t_EI.="\e[4 q" "EI = NORMAL mode (ELSE)
+
+"Cursor settings:
+"  1 -> blinking block
+"  2 -> solid block 
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
 
 """""""""""""""""""""
 " === NerdTREE ==== "
@@ -190,7 +178,6 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
-" let g:NERDTreeWidth=15
 
 " Automaticaly close vim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -201,8 +188,7 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""
 " ===  Airline ==== "
 """""""""""""""""""""
-let g:airline_theme='google_dark' 
-" google_light papercolor
+let g:airline_theme='google_dark' " google_light papercolor
 let g:airline_extensions = []
 
 """""""""""""""""""""""""""""""
@@ -213,7 +199,7 @@ if !exists('##TextYankPost')
 	map y <Plug>(highlightedyank)
 endif
 
-let g:highlightedyank_highlight_duration = 550
+let g:highlightedyank_highlight_duration = 450
 
 """"""""""""""""""""""""""""
 " === YOU COMPLETE ME  === "
@@ -225,4 +211,3 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000087
 " http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
 """""""""""""""""""""""""""""""
-" vim:set ft=vim et sw=2:
