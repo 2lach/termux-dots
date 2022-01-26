@@ -5,7 +5,7 @@
 ##########################
 
 ## SHORTCUTS
-alias v="vim"
+# alias v="vim" | use function v instead
 alias g="git"
 alias c="clear"
 alias e="exit"
@@ -53,6 +53,16 @@ alias pip-search="pip_search"
 function vimrc() {
 	vim $HOME/.vimrc
 }
+
+# vim
+v() {
+  if [ "$#" -eq 0 ]; then
+    vim .
+  else
+    vim "$@"
+  fi
+}
+
 function clamscan_start() {
 	local fresh="/data/data/com.termux/files/usr/bin/freshclam"
 	local clams="/data/data/com.termux/files/usr/bin/clamscan"

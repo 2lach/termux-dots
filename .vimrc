@@ -16,7 +16,7 @@ Plug 'sbdchd/neoformat'
 
 " Autocomplete
 Plug 'machakann/vim-highlightedyank'
-Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
+" Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
 Plug 'moll/vim-node'
 
 " Shorthand notation
@@ -77,6 +77,8 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 				set undodir=~/.vim/undo
 endif
+set undofile
+
 " keep viminfo file in .vim dir
 set viminfo+=n~/.vim/viminfo
 
