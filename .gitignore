@@ -4,6 +4,7 @@
 .config/netlify/
 .config/packages/
 .config/pi/
+.config/pulse/
 .config/tabtab/
 .config/todo.sh/
 .config/zsh/
