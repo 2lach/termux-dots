@@ -3,6 +3,7 @@
 
 # paths live in
 # /data/data/com.termux/files/home/.zshenv
+# and $HOME/z-stuff/paths.sh 
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="refined"
@@ -105,7 +106,7 @@ bw() {
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
+[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
+
 # uncomment to finish profiling
 # zprof
-
-[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh

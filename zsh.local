@@ -16,10 +16,10 @@ alias bat="bat --style=plain --theme='ansi' -n --pager=never"
 ## LIST
 alias ls="ls -A"
 alias lla='ls -la'
-alias las="ls -lhA"
-
+alias las="lsd -A"
+alias l="exa --icons --sort=type --changed -aFxnG"
 alias la="exa --icons -a"
-alias l="exa -lah --sort=Name"
+# alias l="exa -lah --sort=Name"
 alias lsa="exa --icons --sort=type -alh"
 
 # GIT
