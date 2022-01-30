@@ -17,9 +17,10 @@ alias bat="bat --style=plain --theme='ansi' -n --pager=never"
 alias ls="ls -A"
 alias lla='ls -la'
 alias las="lsd -A"
+# alias l="exa -lah --sort=Name"
 alias l="exa --icons --sort=type --changed -aFxnG"
 alias la="exa --icons -a"
-# alias l="exa -lah --sort=Name"
+
 alias lsa="exa --icons --sort=type -alh"
 
 # GIT
@@ -50,27 +51,27 @@ alias pip-search="pip_search"
 # pip_search -s released
 
 function vimrc() {
-	vim $HOME/.vimrc
+        vim $HOME/.vimrc
 }
 
 # vim
 v() {
-  if [ "$#" -eq 0 ]; then
-    vim .
-  else
-    vim "$@"
-  fi
+        if [ "$#" -eq 0 ]; then
+                vim .
+        else
+                vim "$@"
+        fi
 }
 
 function clamscan_start() {
-	local fresh="/data/data/com.termux/files/usr/bin/freshclam"
-	local clams="/data/data/com.termux/files/usr/bin/clamscan"
+        local fresh="/data/data/com.termux/files/usr/bin/freshclam"
+        local clams="/data/data/com.termux/files/usr/bin/clamscan"
 
-	echo "* freshclam"
-	$fresh
-	echo "* clamscan start"
-	$clams --recursive .
-	echo "* clamscan end"
+        echo "* freshclam"
+        $fresh
+        echo "* clamscan start"
+        $clams --recursive .
+        echo "* clamscan end"
 }
 
 ##########################
@@ -78,148 +79,136 @@ function clamscan_start() {
 ##########################
 
 function tre() {
-	if [ $# -eq 0 ]; then
-		tree -L 2 -a
-	else
-		tree -L $1 -a
-	fi
+        if [ $# -eq 0 ]; then
+                tree -L 2 -a
+        else
+                tree -L $1 -a
+        fi
 }
 
 function lst() {
-	if [ $# -eq 0 ]; then
-		lsd -AF --depth 2 --tree
-	else
-		lsd -AF --depth $1 --tree
-	fi
+        if [ $# -eq 0 ]; then
+                lsd -AF --depth 2 --tree
+        else
+                lsd -AF --depth $1 --tree
+        fi
 }
 
 function acp() {
-	git add .
-	git commit -m "$1"
-	git push
+        git add .
+        git commit -m "$1"
+        git push
 }
 
 function dus() {
-	# show folders size, then sort by size
-	du -d 1 -h | sort -hr
+        # show folders size, then sort by size
+        du -d 1 -h | sort -hr
 }
 
 function duds() {
-	du -sh */ | sort -nr
+        du -sh */ | sort -nr
 }
 
 function feco() {
-	echo ""
-	echo "|| $@ ||" | lolcat
-	echo ""
+        echo ""
+        echo "|| $@ ||" | lolcat
+        echo ""
 }
 
 function compress() {
-	# run with the pigz...
-	printf " 🗜 making $1.tar.gz"
-	[ -n "$1" ] && tar cf - "$1" | pigz -9 -p 32 >"$1".tar.gz && printf "\n parrallel gzip (🐷igz) finished"
+        # run with the pigz...
+        printf " 🗜 making $1.tar.gz"
+        [ -n "$1" ] && tar cf - "$1" | pigz -9 -p 32 >"$1".tar.gz && printf "\n parrallel gzip (🐷igz) finished"
 }
 
 function aptu() {
-	feco "apt-get update"
-	apt-get update
+        feco "apt-get update"
+        apt-get update
 
-	feco "apt-get upgrade"
-	apt-get upgrade -y
+        feco "apt-get upgrade"
+        apt-get upgrade -y
 
-	feco "apt-get dist upgrade"
-	apt-get dist-upgrade -y
+        feco "apt-get dist upgrade"
+        apt-get dist-upgrade -y
 
-	feco "apt-get autoclean & purge"
-	apt-get autoclean && apt-get purge
+        feco "apt-get autoclean & purge"
+        apt-get autoclean && apt-get purge
 }
 
 function UPDATE_PIP_PKG() {
-	local pip="/data/data/com.termux/files/usr/bin/pip3"
-	$pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
+        local pip="/data/data/com.termux/files/usr/bin/pip3"
+        $pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
 }
 
 function system_update() {
 
-	feco "APT UPDATE"
-	aptu
+        feco "APT UPDATE"
+        aptu
 
-	feco "PKG UPGRADE"
-	pkg update && pkg upgrade -y && pkg autoclean
+        feco "PKG UPGRADE"
+        pkg update && pkg upgrade -y && pkg autoclean
 
-	feco "AUTOCLEAN & PURGE"
-	apt-get autoclean && apt-get purge
+        feco "AUTOCLEAN & PURGE"
+        apt-get autoclean && apt-get purge
 
-	feco "UPDATE PIPS"
-	UPDATE_PIP_PKG
-	pip cache purge
+        feco "UPDATE PIPS"
+        UPDATE_PIP_PKG
+        pip cache purge
 
-	feco "UPDATE GEMS"
-	gem update
-	gem cleanup
+        feco "UPDATE GEMS"
+        gem update
+        gem cleanup
 
-	#	feco "UPDATE OMZ"
-	#	omz update
+        #	feco "UPDATE OMZ"
+        #	omz update
 
-	feco "UPDATE SYSTEM COMPLETE"
-	local date="/data/data/com.termux/files/usr/bin/date"
-	(echo "System updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
+        feco "UPDATE SYSTEM COMPLETE"
+        local date="/data/data/com.termux/files/usr/bin/date"
+        (echo "System updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
 
-}
-
-man() {
-	# Get colors in manual pages
-	env \
-		LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
-		LESS_TERMCAP_md="$(printf '\e[1;31m')" \
-		LESS_TERMCAP_me="$(printf '\e[0m')" \
-		LESS_TERMCAP_se="$(printf '\e[0m')" \
-		LESS_TERMCAP_so="$(printf '\e[1;44;33m')" \
-		LESS_TERMCAP_ue="$(printf '\e[0m')" \
-		LESS_TERMCAP_us="$(printf '\e[1;32m')" \
-		man "$@"
 }
 
 function howdoi() {
-	if [[ -z $@ ]]; then
-		echo 'wat you wanna know?'
-	else
-		$(which hors) "$@" -a -n 3 -p never
-	fi
+        if [[ -z $@ ]]; then
+                $(which hors) --help
+                echo 'wat you wanna know?'
+        else
+                $(which hors) "$@" -a -n 3 -p never
+        fi
 }
 
 function add-new_book() {
-	vim $HOME/z-stuff/books2022.txt
+        vim $HOME/z-stuff/books2022.txt
 }
 
 function rsync-from-cafanistan() {
-	if [[ -z $1 ]]; then
-		echo 'gotta include path to directory you wanna dl'
-	else
-		rsync -r --info=progress pi@$CAFANISTAN:$1 .
-	fi
+        if [[ -z $1 ]]; then
+                echo 'gotta include path to directory you wanna dl'
+        else
+								rsync -vhEr --info=progress2 pi@$CAFANISTAN:$1 .
+        fi
 }
 
 function rsync-to-cafanistan-from-local() {
-	# rsync path/to/local_file remote_host:path/to/remote
-	if [ -z "$1" ] && [ -z "$2" ]; then
-		echo 'gotta include path to local file you wanna upload'
-	else
-		rsync -r --info=progress2 $1 pi@$CAFANISTAN:$2
-	fi
+        # rsync path/to/local_file remote_host:path/to/remote
+        if [ -z "$1" ] && [ -z "$2" ]; then
+                echo 'gotta include path to local file you wanna upload'
+        else
+                rsync -r --info=progress2 $1 pi@$CAFANISTAN:$2
+        fi
 }
 
 function ip_show_my_public() {
-	myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
-	echo "My WAN/Public IP address: ${myip}"
+        myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+        echo "My WAN/Public IP address: ${myip}"
 }
 
 function convert-mkv-to-mp4() {
-	ffmpeg -i "$1" -acodec ac3 -vcodec copy "$2"
+        ffmpeg -i "$1" -acodec ac3 -vcodec copy "$2"
 }
 
 function count-books() {
-	cat $HOME/z-stuff/books2022.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
+        cat $HOME/z-stuff/books2022.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
 }
 
 ##########################
@@ -241,7 +230,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/scripts/auto-ls.zsh
 . $HOME/z-stuff/scripts/.secrets
 . $HOME/z-stuff/plugins/*/*.plugin.zsh
-
+. $HOME/z-stuff/scripts/man-colors.sh
 # . $HOME/z-stuff/scripts/greetings.sh
 
 ##########################
