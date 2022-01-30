@@ -13,6 +13,7 @@
 .oh-my-zsh
 .todo
 scripts/.secrets
+scripts/test.sh
 z-stuff/plugins/common-aliases/README.md 
 z-stuff/plugins/web-search/README.md 
 z-stuff/plugins/z/README 

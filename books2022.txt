@@ -2,6 +2,8 @@
   The God Engine
   Androids dream
   Old Man's War, book 1
+  Old Man's War, Ghost brigade, book 2
+  Old Man's War, The last colony, book 3
 
 ## Peter Clines
   Terminus
@@ -25,3 +27,6 @@
 ## Drew Hayes
   Super Powereds, Year 1
   Super Powereds, Year 2
+
+## Mary Wollstonecraft Shelley
+  Frankenstein
