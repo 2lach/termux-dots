@@ -3,10 +3,9 @@
 ├── corepack@0.10.0
 ├── git-open@2.1.0
 ├── is-up-cli@4.0.0
-├── netlify-cli@8.4.2
-├── npm-check@5.9.2
+├── netlify-cli@8.14.1
 ├── npm-home@2.0.0
-├── npm@8.3.0
-├── surge@0.23.0
+├── npm@8.1.2
+├── surge@0.23.1
 └── tldr@3.3.7
 
