@@ -6,6 +6,8 @@ call plug#begin()
 " Themes
 Plug 'fugalh/desert.vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'goatslacker/mango.vim'
+Plug 'gf3/molotov'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -13,35 +15,39 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Format
 Plug 'sbdchd/neoformat'
+Plug 'machakann/vim-highlightedyank'
 
 " Autocomplete
-Plug 'machakann/vim-highlightedyank'
-" Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
+Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
 Plug 'moll/vim-node'
 
 " Shorthand notation
 Plug 'junegunn/vim-easy-align'
-
 " Vim filetree           | Lazyload
 Plug 'preservim/nerdtree',{ 'on':'NERDTreeToggle' }
+
 " Initialize plugin system
 call plug#end()
 
 " Turn on filetype detection plugin and indent
 if exists(":filetype") == 2
-  filetype plugin indent on
+				filetype plugin indent on
 endif
 
 " Always turn syntax highlighting on
 " should come after filetype plugin command
 if has("syntax")
-  syntax on
+				syntax on
 endif
 
-colorscheme desert
+set t_Co=256
+" dark background
+set background=dark
+" and molotov theme
+colorscheme molotov
+" desert
 
 set termguicolors
-set t_Co=256
 
 " Make Vim more useful
 set nocompatible
@@ -93,8 +99,8 @@ set modelines=4
 set number
 
 " Highlight current line
-set cursorline 
- highlight Cursorline guibg=black
+set cursorline
+highlight Cursorline guibg=black
 " highlight CursorLine ctermfg=White ctermbg=Green cterm=bold guifg=none guibg=black gui=bold
 
 " Make tabs as wide as two spaces
@@ -157,16 +163,16 @@ if has("autocmd")
 				autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 				" Treat .md files as Markdown
 				autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-			endif
+endif
 
 " Cursor Mode Settings
-" let &t_SI.="\e[4 q" "SI = INSERT mode
+let &t_SI.="\e[4 q" "SI = INSERT mode
 let &t_SR.="\e[3 q" "SR = REPLACE mode
-" let &t_EI.="\e[4 q" "EI = NORMAL mode (ELSE)
+let &t_EI.="\e[4 q" "EI = NORMAL mode (ELSE)
 
 "Cursor settings:
 "  1 -> blinking block
-"  2 -> solid block 
+"  2 -> solid block
 "  3 -> blinking underscore
 "  4 -> solid underscore
 "  5 -> blinking vertical bar
@@ -190,15 +196,17 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""
 " ===  Airline ==== "
 """""""""""""""""""""
-let g:airline_theme='google_dark' " google_light papercolor
+
+let g:airline_theme='google_dark'
+" google_dark google_light papercolor 'molotov'
 let g:airline_extensions = []
 
 """""""""""""""""""""""""""""""
 " === vim-highlightedyank === "
 """""""""""""""""""""""""""""""
 if !exists('##TextYankPost')
-	map Y <Plug>(highlightedyank)
-	map y <Plug>(highlightedyank)
+				map Y <Plug>(highlightedyank)
+				map y <Plug>(highlightedyank)
 endif
 
 let g:highlightedyank_highlight_duration = 450
@@ -211,5 +219,35 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000087
 
 " color charts for vim:
 " http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
+
+"""""""""""""""""""""""""""
+" ===		 Neoformat		=== "
+"""""""""""""""""""""""""""
+let g:neoformat_zsh_shfmt = {
+												\ 'exe': 'shfmt',
+												\ 'args': ['-i ' . shiftwidth()],
+												\ 'stdin': 1,
+												\ }
+let g:neoformat_enabled_zsh = ['shfmt']
+
+" Only message on errors
+let g:neoformat_only_msg_on_error = 1
+
+"Have Neoformat use &formatprg as a formatter
+let g:neoformat_try_formatprg = 1
+
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+
+" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
+augroup fmt
+				autocmd!
+				autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
 """""""""""""""""""""""""""""""
