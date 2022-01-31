@@ -185,7 +185,7 @@ function rsync-from-cafanistan() {
         if [[ -z $1 ]]; then
                 echo 'gotta include path to directory you wanna dl'
         else
-								rsync -vhEr --info=progress2 pi@$CAFANISTAN:$1 .
+                rsync -vhEr --info=progress2 pi@$CAFANISTAN:$1 .
         fi
 }
 
@@ -232,5 +232,12 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/scripts/man-colors.sh
 # . $HOME/z-stuff/scripts/greetings.sh
+
+# cod > creates command completion with $ command -h
+source <(cod init $$ zsh)
+# netlify cli
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+# fzf finder
+[ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
 
 ##########################
