@@ -11,7 +11,7 @@ alias c="clear"
 alias e="exit"
 alias qq="exit"
 alias mkd="mkdir -v"
-alias bat="bat --style=plain --theme='ansi' -n --pager=never"
+alias bat="bat --style=plain --theme='ansi' --pager=never"
 
 ## LIST
 alias ls="ls -A"
@@ -20,7 +20,6 @@ alias las="lsd -A"
 # alias l="exa -lah --sort=Name"
 alias l="exa --icons --sort=type --changed -aFxnG"
 alias la="exa --icons -a"
-
 alias lsa="exa --icons --sort=type -alh"
 
 # GIT
@@ -45,6 +44,7 @@ alias edit-ohmyzsh="vim ~/.oh-my-zsh"
 alias pip2="/data/data/com.termux/files/usr/bin/pip"
 alias pip="/data/data/com.termux/files/usr/bin/pip3"
 alias pip-search="pip_search"
+
 # pip search options:
 # pip_search -s name
 # pip_search -s version
@@ -63,10 +63,20 @@ v() {
         fi
 }
 
+o() {
+        local open="/data/data/com.termux/files/usr/bin/termux-open"
+
+        if [ "$#" -eq 0 ]; then
+                emulate -L zsh $open
+        else
+                $open "$@"
+        fi
+}
+alias open="o"
+
 function clamscan_start() {
         local fresh="/data/data/com.termux/files/usr/bin/freshclam"
         local clams="/data/data/com.termux/files/usr/bin/clamscan"
-
         echo "* freshclam"
         $fresh
         echo "* clamscan start"
@@ -159,10 +169,10 @@ function system_update() {
         gem update
         gem cleanup
 
-        #	feco "UPDATE OMZ"
-        #	omz update
+        feco "UPDATE OMZ"
+        omz update
 
-        feco "UPDATE SYSTEM COMPLETE"
+        figlet "UPDATE SYSTEM COMPLETE"
         local date="/data/data/com.termux/files/usr/bin/date"
         (echo "System updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
 
