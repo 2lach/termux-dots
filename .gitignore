@@ -3,7 +3,6 @@
 .config/configstore/*
 .config/gh/
 .config/netlify/
-.config/packages/
 .config/pi/
 .config/pulse/
 .config/tabtab/
