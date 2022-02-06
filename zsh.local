@@ -20,6 +20,7 @@ alias las="lsd -A"
 # alias l="exa -lah --sort=Name"
 alias l="exa --icons --sort=type --changed -aFxnG"
 alias la="exa --icons -a"
+
 alias lsa="exa --icons --sort=type -alh"
 
 # GIT
@@ -172,7 +173,6 @@ function system_update() {
         feco "UPDATE OMZ"
         omz update
 
-        figlet "UPDATE SYSTEM COMPLETE"
         local date="/data/data/com.termux/files/usr/bin/date"
         (echo "System updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
 
@@ -218,9 +218,14 @@ function convert-mkv-to-mp4() {
 }
 
 function count-books() {
+        # cat txtfile | sed without #, newlines | count lines
         cat $HOME/z-stuff/books2022.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
 }
 
+function system_update_log() {
+        cat /data/data/com.termux/files/home/z-stuff/system_updated.txt
+
+}
 ##########################
 # SYSTEM TWEAKS
 ##########################
