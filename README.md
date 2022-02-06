@@ -9,9 +9,12 @@ First get termux and termux style addon
 
 Then you can just clone this repo to your termux home folder.
 The cd into termux-dots/.config/packages
-And then run
+And then run:
+`./setup.sh`
+this will not mess up your system but it is highly recommended that you read thru the files so you know what your getting into.
 
+The setup script will install quite a few apt packages,node modules, gems, pips and then some.
 
-Then setup: zsh + oh my zsh
-I prefer vim as my editor, which i use with vim plug and airline
+I use my phone for notetaking (vim) system administration (mostly ssh) some scripting, deployments, testing and so on.
+It works for me and might work for you or atleast be a good place to start playing around with termux in a good enviroment with almost all basic setups already taken care of.
 
