@@ -20,6 +20,7 @@ clamav-static
 clamav
 clang
 cmake
+cmatrix
 command-not-found
 coreutils
 cowsay
@@ -242,6 +243,7 @@ texinfo
 tree
 ttf-dejavu
 unbound
+units
 unzip
 util-linux
 valac

@@ -1,11 +1,10 @@
-/data/data/com.termux/files/usr/lib
-├── @bitwarden/cli@1.20.0
-├── corepack@0.10.0
-├── git-open@2.1.0
-├── is-up-cli@4.0.0
-├── netlify-cli@8.14.1
-├── npm-home@2.0.0
-├── npm@8.1.2
-├── surge@0.23.1
-└── tldr@3.3.7
-
+@bitwarden
+@idleberg
+corepack
+git-open
+is-up-cli
+netlify-cli
+npm
+npm-home
+surge
+tldr
