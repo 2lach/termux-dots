@@ -65,6 +65,7 @@ gzip
 harfbuzz
 help2man
 hors
+htop-legacy
 inetutils
 json-c
 jsoncpp
