@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/data/data/com.termux/files/usr/bin/zsh
 # -X Don't clear after exit
 # export MANPAGER="less -X --use-color -Dd+r -Du+b"
 

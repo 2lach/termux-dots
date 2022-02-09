@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 echo "# Ansi color code variables"
 red="\e[0;91m"
