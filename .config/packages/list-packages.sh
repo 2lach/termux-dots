@@ -1,12 +1,9 @@
 #!/bin/bash
 
 # mkdir "$(date '+%Y-%m-%d')"
-
-pkg list-installed >pkg.txt
-sed "s/[/].*//" pkg.txt >pkg-packages.txt
-rm -rf pkg.txt
-npm list -g --depth=0 >npm-packages.txt
-pip freeze >pip-packages.txt
+pkg list-installed | sed "s/[/].*//" >pkg-packages.txt
+exa /data/data/com.termux/files/usr/lib/node_modules/ >npm-packages.txt
+pip list --format=freeze | grep --color -v '^\-e' | cut -d = -f 1 >pip-packages.txt
 gem list >gem-packages.txt
 
 # mv *-packages.txt "$(date '+%Y-%m-%d')"
