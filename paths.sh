@@ -3,7 +3,7 @@
 ##########
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export HORS_ENGINE=bing
+# export HORS_ENGINE=bing
 
 # cod completions learner
 export CODPATH="/data/data/com.termux/files/home/go/bin/cod"

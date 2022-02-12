@@ -146,7 +146,7 @@ function aptu() {
         apt-get autoclean && apt-get purge
 }
 
-function UPDATE_PIP_PKG() {
+function pip_pkg_update() {
         local pip="/data/data/com.termux/files/usr/bin/pip3"
         $pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
 }
@@ -163,7 +163,7 @@ function system_update() {
         apt-get autoclean && apt-get purge
 
         feco "UPDATE PIPS"
-        UPDATE_PIP_PKG
+        pip_pkg_update
         pip cache purge
 
         feco "UPDATE GEMS"
@@ -174,8 +174,8 @@ function system_update() {
         omz update
 
         local date="/data/data/com.termux/files/usr/bin/date"
-        (echo "System updated" | lolcat && $date && echo "") >>/data/data/com.termux/files/home/z-stuff/system_updated.txt
-
+        (echo "System updated" | lolcat && $date && echo "") >>$SYSTEM_LOG
+        # export $SYSTEM_LOG="/data/data/com.termux/files/usr/var/    log/sys_logs/system_updated.txt"
 }
 
 function howdoi() {
@@ -223,11 +223,13 @@ function count-books() {
 }
 
 function system_update_log() {
-        cat /data/data/com.termux/files/home/z-stuff/system_updated.txt
+        # prints system updated logfile
+        cat $SYSTEM_LOG
+        #/data/data/com.termux/files/home/z-stuff/system_updated.txt
 
 }
 ##########################
-# SYSTEM TWEAKS
+# ZSH SYSTEM TWEAKS
 ##########################
 
 # a new command line being added to the history list duplicates an older one, the older command is removed from the list (even if it is not the previous event
@@ -250,6 +252,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # cod > creates command completion with $ command -h
 source <(cod init $$ zsh)
+# source <(ssh-agent $$ zsh)
+
 # netlify cli
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 # fzf finder
