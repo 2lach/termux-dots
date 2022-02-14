@@ -1,9 +1,9 @@
-
 .config/Bitwarden CLI/
 .config/configstore/*
 .config/gh/
 .config/netlify/
 .config/pi/
+.config/private_not_synced_folder
 .config/pulse/
 .config/tabtab/
 .config/todo.sh/
@@ -12,6 +12,7 @@
 .local
 .oh-my-zsh
 .termux/font.ttf
+.termux/termux.d
 .todo
 scripts/.secrets
 scripts/test.sh

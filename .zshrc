@@ -18,7 +18,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # where is keep my custom stuff/scripts
 ZSH_CUSTOM="$HOME/z-stuff"
 # omz plugins
-plugins=(web-search z fd zsh-syntax-highlighting common-aliases gh)
+plugins=(web-search z fd zsh-syntax-highlighting common-aliases gh cod)
 # load oh my zsh
 source $ZSH/oh-my-zsh.sh
 # editor languange
