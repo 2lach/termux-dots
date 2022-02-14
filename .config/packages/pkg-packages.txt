@@ -73,6 +73,7 @@ krb5
 ldns
 less
 libandroid-glob
+libandroid-posix-semaphore
 libandroid-shmem
 libandroid-spawn
 libandroid-support
@@ -131,7 +132,6 @@ libsndfile
 libsoxr
 libsqlite
 libssh2
-libtasn1
 libtiff
 libtirpc
 libtool
@@ -169,7 +169,6 @@ libxxf86vm
 libyaml
 lld
 llvm
-lsd
 lsof
 lzip
 m4
@@ -195,7 +194,6 @@ oniguruma
 openssh
 openssl-tool
 openssl
-p11-kit
 patch
 pcre2
 pcre
@@ -223,6 +221,7 @@ sdl2-ttf
 sdl2
 sed
 shfmt
+silversearcher-ag
 slang
 speexdsp
 sshpass
