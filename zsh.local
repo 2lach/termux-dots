@@ -251,7 +251,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 # . $HOME/z-stuff/scripts/greetings.sh
 
 # cod > creates command completion with $ command -h
-source <(cod init $$ zsh)
+# source <(cod init $$ zsh)
 # source <(ssh-agent $$ zsh)
 
 # netlify cli
