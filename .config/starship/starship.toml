@@ -1,5 +1,4 @@
 # config file for starship prompt
-
 # A minimal left prompt
 # format = """$character"""
 
