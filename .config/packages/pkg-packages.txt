@@ -57,10 +57,12 @@ giflib
 git
 glib
 gnupg
+gnurl
 golang
 gperf
 gpgv
 grep
+groff
 gzip
 harfbuzz
 help2man
@@ -215,6 +217,7 @@ rhash
 rsync
 ruby
 runit
+rustscan
 science-repo
 screen
 sdl2-ttf
