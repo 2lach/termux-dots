@@ -64,9 +64,9 @@ function v() {
 }
 
 function replace_spaces() {
-	# takes filenames containing spaces and
-	# replaces the space with a underscore _
-	for f in *\ *; do mv "$f" "${f// /_}"; done
+# takes filenames containing spaces and
+# replaces the space with a underscore _
+for f in *\ *; do mv "$f" "${f// /_}"; done
 }
 
 function o() {
@@ -80,9 +80,10 @@ function o() {
 }
 alias open="o"
 
+
 function clamscan_start() {
-	# run clamscan recursive from current path
-	local fresh="/data/data/com.termux/files/usr/bin/freshclam"
+# run clamscan recursive from current path 
+local fresh="/data/data/com.termux/files/usr/bin/freshclam"
 	local clams="/data/data/com.termux/files/usr/bin/clamscan"
 
 	echo "* freshclam"
@@ -94,23 +95,23 @@ function clamscan_start() {
 
 function lst() {
 
-	# regex is int 0-9
-	local re='^[0-9]+$'
+# regex is int 0-9
+local re='^[0-9]+$'
 
-	# no arg use default
-	if [ $# -eq 0 ]; then
-		exa --tree --level=2
+# no arg use default  
+if [ $# -eq 0 ]; then
+	exa --tree --level=2
 
-	elif ! [[ $1 =~ $re ]]; then
-		# $1 is Not a number"
-		# meaning its likely a path/folder
-		exa --tree --level=2 $1
-
-	else
-		# $1 exists and is a number meaning depth/level
-		exa --tree --level=$1
-	fi
-
+elif ! [[ $1 =~ $re ]]; then
+   # $1 is Not a number"
+	 # meaning its likely a path/folder
+	exa --tree --level=2 $1
+	
+else
+# $1 exists and is a number meaning depth/level
+exa --tree --level=$1
+fi
+	
 }
 
 function acp() {
@@ -125,14 +126,14 @@ function dus() {
 }
 
 function duds() {
-	# kinda the same as above
+  # kinda the same as above
 	du -sh */ | sort -nr
 }
 
 function feco() {
-	# ANNOUNINCING
-	# || LORD Feco of lolcat... ||
-	echo ""
+# ANNOUNINCING
+# || LORD Feco of lolcat... ||
+  echo ""
 	echo "|| $@ ||" | lolcat
 	echo ""
 }
@@ -145,9 +146,9 @@ function compress() {
 }
 
 function aptu() {
-	# stole this from catalàins dotfiles
-	# works better on ubuntu/debian then on termux
-	feco "apt-get update"
+# stole this from catalàins dotfiles
+# works better on ubuntu/debian then on termux
+  feco "apt-get update"
 	apt-get update
 
 	feco "apt-get upgrade"
@@ -168,15 +169,15 @@ function pip_pkg_update() {
 function system_update() {
 
 	feco "APT UPDATE"
-	apt update
-	apt full-upgrade
+  apt update
+  apt full-upgrade
 
 	feco "PKG UPGRADE"
 	pkg update && pkg upgrade -y
 
 	feco "CLEANUP"
 	apt-get autoclean && apt-get purge
-	pkg clean && pkg autoclean
+  pkg clean && pkg autoclean
 
 	feco "UPDATE PIPS"
 	pip_pkg_update
@@ -247,8 +248,8 @@ function system_update_log() {
 }
 
 function date_format() {
-	# prints date in format yyyy-mm-dd
-	echo $(date '+%Y-%m-%d')
+# prints date in format yyyy-mm-dd
+echo $(date '+%Y-%m-%d')
 }
 ##########################
 # ZSH SYSTEM TWEAKS
