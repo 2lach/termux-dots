@@ -26,7 +26,7 @@ export LANG=en_US.UTF-8
 # Use vim as default editor
 export EDITOR='vim'
 if [[ -n $SSH_CONNECTION ]]; then
-        export EDITOR='vim'
+	export EDITOR='vim'
 fi
 # my local "zshrc"
 source "$ZSH_CUSTOM/zsh.local"
