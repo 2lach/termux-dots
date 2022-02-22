@@ -14,7 +14,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Format
-Plug 'sbdchd/neoformat'
+Plug 'aonemd/fmt.vim'
+"Plug 'sbdchd/neoformat'
 Plug 'machakann/vim-highlightedyank'
 
 " Autocomplete
@@ -221,34 +222,57 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000087
 " http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 
 """""""""""""""""""""""""""
-" ===		 Neoformat		=== "
+" ===			fmt.vim			=== "
 """""""""""""""""""""""""""
-let g:neoformat_zsh_shfmt = {
-												\ 'exe': 'shfmt',
-												\ 'args': ['-i ' . shiftwidth()],
-												\ 'stdin': 1,
+let g:fmt_commands = {
+												\ 'rust': 'rustfmt',
+												\ 'go': 'gofmt -w',
+												\ 'c': 'clang-format -i -style=google',
+												\ 'cpp': 'clang-format -i -style=google',
+												\ 'javascript': 'prettier --write',
+												\ 'typescript': 'prettier --write',
+												\ 'ruby': 'rufo',
+												\ 'sh': 'shfmt -w',
+												\ 'zsh': 'shfmt -w',
 												\ }
 
-let g:neoformat_enabled_zsh = ['shfmt']
+autocmd! BufWrite * Fmt
 
-" Only message on errors
-let g:neoformat_only_msg_on_error = 1
+" augroup fmt
+"					autocmd!
+"					autocmd BufWritePre * undojoin | Neoformat
+" augroup END
 
-"Have Neoformat use &formatprg as a formatter
-" let g:neoformat_try_formatprg = 1
 
-" Enable alignment
+"""""""""""""""""""""""""""
+" ===		 Neoformat		=== "
+"""""""""""""""""""""""""""
+" let g:neoformat_zsh_shfmt = {
+"													\ 'exe': 'shfmt',
+"													\ 'args': ['-i ' . shiftwidth()],
+"													\ 'stdin': 1,
+"													\ }
+"
+" let g:neoformat_enabled_zsh = ['shfmt']
+"
+" " Only message on errors
+" let g:neoformat_only_msg_on_error = 1
+"
+" "Have Neoformat use &formatprg as a formatter
+" " let g:neoformat_try_formatprg = 1
+"
+" " Enable alignment
 " let g:neoformat_basic_format_align = 1
-
-" Enable tab to spaces conversion
+"
+" " Enable tab to spaces conversion
 " let g:neoformat_basic_format_retab = 1
-
-" Enable trimmming of trailing whitespace
-let g:neoformat_basic_format_trim = 1
-
-augroup fmt
-				autocmd!
-				autocmd BufWritePre * undojoin | Neoformat
-augroup END
+"
+" " Enable trimmming of trailing whitespace
+" let g:neoformat_basic_format_trim = 1
+"
+" augroup fmt
+"					autocmd!
+"					autocmd BufWritePre * undojoin | Neoformat
+" augroup END
 
 """""""""""""""""""""""""""""""
