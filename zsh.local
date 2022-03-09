@@ -191,10 +191,10 @@ function system_update() {
 	omz update
 
 	local date="/data/data/com.termux/files/usr/bin/date"
-
+	local SYSTEM_LOG="/data/data/com.termux/files/usr/var/log/sys_logs/system_updated.txt"
 	(echo "System updated" | lolcat) >>$SYSTEM_LOG
 	($date && echo "") >>$SYSTEM_LOG
-	# export $SYSTEM_LOG="/data/data/com.termux/files/usr/var/    log/sys_logs/system_updated.txt"
+
 }
 
 function howdoi() {
