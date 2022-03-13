@@ -1,5 +1,14 @@
-# Termux dotfiles⁷
+# Termux dotfiles
 ### 2lach termux dotfiles
+
+```sh
+enviroment: android (arch linux) and termux
+shell: zsh, oh my zsh (bash and fish is secondary)
+
+daily use:
+vim, vim-plug, ssh, gpg, git, z, starship, golang, nodejs, starship, tldr, nmap and more
+
+```
 
 This is the repo containing my dotfiles, scripts
 and various setups and configs is use from my phone.
