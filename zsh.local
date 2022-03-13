@@ -11,7 +11,7 @@ alias c="clear"
 alias e="exit"
 alias qq="exit"
 alias mkd="mkdir -v"
-alias bat="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
+alias catt="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
 
 ## LIST
 alias l="exa -lah --sort=Name"
@@ -169,7 +169,7 @@ function system_update() {
 
 	feco "APT UPDATE"
 	apt update
-	apt full-upgrade
+	apt full-upgrade -y
 
 	feco "PKG UPGRADE"
 	pkg update && pkg upgrade -y
