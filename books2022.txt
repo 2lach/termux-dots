@@ -17,6 +17,7 @@ Ex-Communication, Book 3
 Ex-Purgatory, Book 4
 Ex-Isle, Book 5
 Paradox bound
+The broken room
 
 ## Daryl Gregory
 The Album of Dr. Moreau
@@ -49,3 +50,4 @@ Flowers for Algernon
 ## Brandon Sanderson
 Stormlight archives, the book of kings, book 1
 Stormlight archives, words of radiance, book 2
+Stormlight archives, oathbringer, book 3

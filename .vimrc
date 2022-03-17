@@ -1,4 +1,4 @@
-" 2lach
+:" 2lach
 " termux android zsh
 
 " Vimplug | https://github.com/junegunn/vim-plug
@@ -8,6 +8,7 @@ Plug 'fugalh/desert.vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'goatslacker/mango.vim'
 Plug 'gf3/molotov'
+Plug 'pineapplegiant/spaceduck'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -193,14 +194,23 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " toogle with <Ctrl> + n
 map <C-n> :NERDTreeToggle<CR>
+				
+:"""""""""""""""""""""
+": ===  Airline ==== "
+:"""""""""""""""""""""
+let g:airline_theme='base16_solarized_light'
+" 'random' google_dark google_light papercolor 'molotov'
+" let g:airline_extensions = []
 
-"""""""""""""""""""""
-" ===  Airline ==== "
-"""""""""""""""""""""
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_powerline_fonts = 1
 
-let g:airline_theme='google_dark'
-" google_dark google_light papercolor 'molotov'
-let g:airline_extensions = []
+let g:airline_skip_empty_sections = 1
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+let g:airline#extensions#tabline#formatter = 'default'
 
 """""""""""""""""""""""""""""""
 " === vim-highlightedyank === "
@@ -243,36 +253,3 @@ autocmd! BufWrite * Fmt
 "					autocmd BufWritePre * undojoin | Neoformat
 " augroup END
 
-
-"""""""""""""""""""""""""""
-" ===		 Neoformat		=== "
-"""""""""""""""""""""""""""
-" let g:neoformat_zsh_shfmt = {
-"													\ 'exe': 'shfmt',
-"													\ 'args': ['-i ' . shiftwidth()],
-"													\ 'stdin': 1,
-"													\ }
-"
-" let g:neoformat_enabled_zsh = ['shfmt']
-"
-" " Only message on errors
-" let g:neoformat_only_msg_on_error = 1
-"
-" "Have Neoformat use &formatprg as a formatter
-" " let g:neoformat_try_formatprg = 1
-"
-" " Enable alignment
-" let g:neoformat_basic_format_align = 1
-"
-" " Enable tab to spaces conversion
-" let g:neoformat_basic_format_retab = 1
-"
-" " Enable trimmming of trailing whitespace
-" let g:neoformat_basic_format_trim = 1
-"
-" augroup fmt
-"					autocmd!
-"					autocmd BufWritePre * undojoin | Neoformat
-" augroup END
-
-"""""""""""""""""""""""""""""""
