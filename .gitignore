@@ -14,6 +14,7 @@
 .termux/font.ttf
 .termux/termux.d
 .todo
+notes
 scripts/.secrets
 scripts/test.sh
 z-stuff/plugins/common-aliases/README.md
