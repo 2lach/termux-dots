@@ -165,6 +165,18 @@ function pip_pkg_update() {
 	$pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
 }
 
+function add_system_update_datestamp() {
+
+	local date="/usr/bin/date"
+
+	local termuxFiles="/data/data/com.termux/files"
+
+	local SYSTEM_LOG="$termuxFiles/usr/var/log/sys_logs/system_updated.txt"
+
+	(echo "System updated" | lolcat) >>$SYSTEM_LOG
+	($date && echo "") >>$SYSTEM_LOG
+}
+
 function system_update() {
 
 	feco "APT UPDATE"
@@ -190,10 +202,7 @@ function system_update() {
 	feco "UPDATE OMZ"
 	omz update
 
-	local date="/data/data/com.termux/files/usr/bin/date"
-	local SYSTEM_LOG="/data/data/com.termux/files/usr/var/log/sys_logs/system_updated.txt"
-	(echo "System updated" | lolcat) >>$SYSTEM_LOG
-	($date && echo "") >>$SYSTEM_LOG
+	add_system_update_datestamp
 
 }
 
