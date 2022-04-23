@@ -5,8 +5,6 @@
 call plug#begin()
 " Themes
 Plug 'fugalh/desert.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'goatslacker/mango.vim'
 Plug 'gf3/molotov'
 Plug 'pineapplegiant/spaceduck'
 
@@ -18,10 +16,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'aonemd/fmt.vim'
 "Plug 'sbdchd/neoformat'
 Plug 'machakann/vim-highlightedyank'
-
+Plug 'tpope/vim-commentary'
 " Autocomplete
 Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
-Plug 'moll/vim-node'
 
 " Shorthand notation
 Plug 'junegunn/vim-easy-align'
@@ -45,9 +42,8 @@ endif
 set t_Co=256
 " dark background
 set background=dark
-" and molotov theme
+" theme
 colorscheme molotov
-" desert
 
 set termguicolors
 
@@ -103,7 +99,6 @@ set number
 " Highlight current line
 set cursorline
 highlight Cursorline guibg=black
-" highlight CursorLine ctermfg=White ctermbg=Green cterm=bold guifg=none guibg=black gui=bold
 
 " Make tabs as wide as two spaces
 set tabstop=2
@@ -252,4 +247,3 @@ autocmd! BufWrite * Fmt
 "					autocmd!
 "					autocmd BufWritePre * undojoin | Neoformat
 " augroup END
-
