@@ -12,6 +12,7 @@ alias e="exit"
 alias qq="exit"
 alias mkd="mkdir -v"
 alias catt="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
+alias untar='tar xvf'
 
 ## LIST
 alias l="exa -lah --sort=Name"
