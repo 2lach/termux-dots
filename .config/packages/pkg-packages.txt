@@ -37,7 +37,6 @@ docbook-xsl
 dos2unix
 dpkg
 ed
-emacs
 exa
 fcp
 fd
@@ -63,7 +62,6 @@ git
 glib
 gnupg
 gnurl
-gnutls
 golang
 gperf
 gpgv
@@ -116,7 +114,6 @@ libice
 libiconv
 libicu
 libidn2
-libjansson
 libjpeg-turbo
 libksba
 libllvm
