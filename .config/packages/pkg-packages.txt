@@ -5,6 +5,7 @@ asciidoctor
 attr
 autoconf
 automake
+bash-completion
 bash
 bat
 bc
@@ -12,6 +13,7 @@ binutils-gold
 binutils
 bison
 brotli
+busybox
 bzip2
 c-ares
 ca-certificates
@@ -35,7 +37,9 @@ docbook-xsl
 dos2unix
 dpkg
 ed
+emacs
 exa
+fcp
 fd
 ffmpeg
 figlet
@@ -43,11 +47,12 @@ file
 findutils
 fish
 flex
+fontconfig-utils
 fontconfig
 fortune
 freetype
 fribidi
-game-repo
+game-music-emu
 gawk
 gdbm
 getconf
@@ -58,6 +63,7 @@ git
 glib
 gnupg
 gnurl
+gnutls
 golang
 gperf
 gpgv
@@ -74,6 +80,7 @@ jsoncpp
 krb5
 ldns
 less
+lf
 libandroid-glob
 libandroid-posix-semaphore
 libandroid-shmem
@@ -83,6 +90,7 @@ libaom
 libarchive
 libass
 libassuan
+libbluray
 libbz2
 libc++
 libcap-ng
@@ -93,7 +101,6 @@ libcrypt
 libcurl
 libdav1d
 libdb
-libdrm
 libedit
 libevent
 libexpat
@@ -109,6 +116,7 @@ libice
 libiconv
 libicu
 libidn2
+libjansson
 libjpeg-turbo
 libksba
 libllvm
@@ -137,6 +145,7 @@ libssh2
 libtiff
 libtirpc
 libtool
+libudfread
 libunistring
 libuuid
 libuv
@@ -152,7 +161,6 @@ libx265
 libxau
 libxcb
 libxcursor
-libxdamage
 libxdmcp
 libxext
 libxfixes
@@ -163,7 +171,6 @@ libxml2
 libxmu
 libxrandr
 libxrender
-libxshmfence
 libxslt
 libxss
 libxt
@@ -176,6 +183,7 @@ lzip
 m4
 make
 man
+manpages
 mesa
 most
 nano
@@ -193,7 +201,9 @@ nmap
 nodejs-lts
 nsnake
 oniguruma
+openssh-sftp-server
 openssh
+openssl-1.1
 openssl-tool
 openssl
 patch
@@ -218,7 +228,6 @@ rsync
 ruby
 runit
 rustscan
-science-repo
 screen
 sdl2-ttf
 sdl2
@@ -228,6 +237,7 @@ silversearcher-ag
 slang
 speexdsp
 sshpass
+sslscan
 starship
 tar
 termux-am-socket
@@ -248,6 +258,7 @@ ttf-dejavu
 unbound
 units
 unzip
+update-info-dir
 util-linux
 valac
 vim-python
@@ -264,5 +275,6 @@ xxhash
 xz-utils
 zip
 zlib
+zsh-completions
 zsh
 zstd
