@@ -204,7 +204,7 @@ function system_update() {
 	omz update
 
 	add_system_update_datestamp
-
+	feco "system_update completed"
 }
 
 function howdoi() {
@@ -218,23 +218,6 @@ function howdoi() {
 
 function add-new_book() {
 	vim $HOME/z-stuff/books2022.txt
-}
-
-function rsync-from-cafanistan() {
-	if [[ -z $1 ]]; then
-		echo 'gotta include path to directory you wanna dl'
-	else
-		rsync -vhEr --info=progress2 pi@$CAFANISTAN:$1 .
-	fi
-}
-
-function rsync-to-cafanistan-from-local() {
-	# rsync path/to/local_file remote_host:path/to/remote
-	if [ -z "$1" ] && [ -z "$2" ]; then
-		echo 'gotta include path to local file you wanna upload'
-	else
-		rsync -r --info=progress2 $1 pi@$CAFANISTAN:$2
-	fi
 }
 
 function ip_show_my_public() {
