@@ -1,8 +1,10 @@
 aiohttp
 aiosignal
+asciidoc
 async-timeout
 attrs
 beautifulsoup4
+Brotli
 bs4
 casttube
 cattqt
@@ -28,6 +30,7 @@ requests
 rich
 setuptools
 soupsieve
+speedtest-cli
 typing_extensions
 urllib3
 websockets
