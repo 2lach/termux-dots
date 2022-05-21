@@ -264,7 +264,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/scripts/.secrets
 . $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/scripts/man-colors.sh
-#. $HOME/z-stuff/scripts/greetings.sh
 
 # cod > creates command completion with
 # $ command -h
