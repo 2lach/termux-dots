@@ -30,3 +30,5 @@ if [[ -n $SSH_CONNECTION ]]; then
 fi
 # my local "zshrc"
 source "$ZSH_CUSTOM/zsh.local"
+
+#zprof
