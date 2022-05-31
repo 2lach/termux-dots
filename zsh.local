@@ -13,7 +13,6 @@ alias qq="exit"
 alias mkd="mkdir -v"
 alias catt="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
 alias untar='tar xvf'
-
 ## LIST
 alias l="exa -lah --sort=Name"
 alias ll="exa --icons --sort=type --changed -aFxnG"
@@ -31,7 +30,7 @@ alias gcm="git commit -m"
 # MISC
 alias shellformat="shfmt" # requires pkg 'shfmt'
 alias npm-list-globals="npm list -g --depth=0"
-alias todo="todo.sh"
+alias gd="goodreads"
 
 # OMZ
 alias edit-zshrc="vim ~/.zshrc"
@@ -68,6 +67,14 @@ function replace_spaces() {
 	# takes filenames containing spaces and
 	# replaces the space with a underscore _
 	for f in *\ *; do mv "$f" "${f// /_}"; done
+}
+
+function todo() {
+	cd $HOME/z-stuff/notes >/dev/null
+	date_format >>todo
+	echo "" >>todo
+	vim todo
+	cd -1 >/dev/null
 }
 
 function o() {
@@ -201,10 +208,11 @@ function system_update() {
 	gem cleanup
 
 	feco "UPDATE OMZ"
-	omz update
+	omz update >/dev/null
+	feco "omz update completed"
 
 	add_system_update_datestamp
-	feco "system_update completed"
+	feco "system update completed"
 }
 
 function howdoi() {
@@ -229,8 +237,12 @@ function convert-mkv-to-mp4() {
 	ffmpeg -i "$1" -acodec ac3 -vcodec copy "$2"
 }
 
+function list-books() {
+	cat $HOME/z-stuff/books2022.txt
+}
+
 function count-books() {
-	# cat txtfile | sed away # newlines | count lines
+	# cat txtfile | sed ignore # and newlines | count remaining lines
 	cat $HOME/z-stuff/books2022.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
 }
 
@@ -264,6 +276,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/scripts/.secrets
 . $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/scripts/man-colors.sh
+# . $HOME/z-stuff/scripts/welcomeZ.sh
 
 # cod > creates command completion with
 # $ command -h
