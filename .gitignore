@@ -1,4 +1,5 @@
 .config/Bitwarden CLI/
+.config/cache/
 .config/configstore/*
 .config/gh/
 .config/netlify/
@@ -7,6 +8,7 @@
 .config/pulse/
 .config/tabtab/
 .config/todo.sh/
+.config/z/
 .config/zsh/
 .ideas
 .local
@@ -16,10 +18,10 @@
 .todo
 notes
 scripts/.secrets
+scripts/sherlock/
 scripts/test.sh
 z-stuff/plugins/common-aliases/README.md
 z-stuff/plugins/web-search/README.md
 z-stuff/plugins/z/README
 z-stuff/plugins/z/README.md
 z-stuff/system_updated.txt
-scripts/sherlock/
