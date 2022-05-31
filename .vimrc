@@ -14,7 +14,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Format
 Plug 'aonemd/fmt.vim'
-"Plug 'sbdchd/neoformat'
+Plug 'sbdchd/neoformat'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 " Autocomplete
