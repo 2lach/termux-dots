@@ -17,8 +17,9 @@ Plug 'aonemd/fmt.vim'
 Plug 'sbdchd/neoformat'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
+
 " Autocomplete
-Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
+" Plug 'ycm-core/YouCompleteMe' " pkg i vim-python
 
 " Shorthand notation
 Plug 'junegunn/vim-easy-align'
