@@ -257,6 +257,7 @@ function date_format() {
 	# prints date in format yyyy-mm-dd
 	echo $(date '+%Y-%m-%d')
 }
+
 ##########################
 # ZSH SYSTEM TWEAKS
 ##########################

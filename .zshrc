@@ -1,3 +1,5 @@
+#!/data/data/com.termux/files/usr/bin/zsh
+
 # uncomment to profile prompt startup with zprof
 # zmodload zsh/zprof
 #
