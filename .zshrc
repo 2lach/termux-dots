@@ -2,7 +2,7 @@
 
 # uncomment to profile prompt startup with zprof
 # zmodload zsh/zprof
-#
+
 # ZSH Theme
 eval "$(starship init zsh)"
 # makes - and _ interchangable
@@ -30,6 +30,7 @@ export EDITOR='vim'
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 fi
+
 # my local "zshrc"
 source "$ZSH_CUSTOM/zsh.local"
 
