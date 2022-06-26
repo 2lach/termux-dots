@@ -1,10 +1,16 @@
 @bitwarden
 @idleberg
 corepack
+csscomb
 git-open
 is-up-cli
+js-beautify
 netlify-cli
 npm
+npm-check
 npm-home
+prettydiff
 surge
 tldr
+typescript
+typescript-formatter
