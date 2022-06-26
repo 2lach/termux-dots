@@ -73,6 +73,7 @@ help2man
 hors
 htop-legacy
 inetutils
+jq
 json-c
 jsoncpp
 krb5
@@ -139,6 +140,7 @@ libsndfile
 libsoxr
 libsqlite
 libssh2
+libtheora
 libtiff
 libtirpc
 libtool
@@ -181,6 +183,7 @@ m4
 make
 man
 manpages
+mc
 mesa
 most
 nano
@@ -224,13 +227,13 @@ rhash
 rsync
 ruby
 runit
-rustscan
 screen
 sdl2-ttf
 sdl2
 sed
 shfmt
 silversearcher-ag
+sl
 slang
 speexdsp
 sshpass
