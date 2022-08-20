@@ -5,6 +5,7 @@
 ##########################
 
 ## SHORTCUTS
+# alias v="vim" | use function v instead
 alias g="git"
 alias c="clear"
 alias e="exit"
