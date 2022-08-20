@@ -64,7 +64,7 @@ Hard Luck Hank, Screw the universe, book 1
 Hard Luck Hank, Basketful of crap, book 2
 Hard Luck Hank, Prince of suck, book 3
 Hard Luck Hank, Suck my cosmos, book 4
-Hard Luck Hank, Stank delicious, book 5 
+Hard Luck Hank, Stank delicious, book 5
 Hard Luck Hank, Robot farts, book 6
 Hard Luck Hank, Dumber than dead, book 7
 Hard Luck Hank, Frankly, book 9
@@ -113,7 +113,7 @@ Book 05 The Guns of Nana Joan
 Book 06 Return of the Dead Guy
 Book 07 Planet of the Japes
 Book 08 The Time Titan of Tomorrow
-Book 09 The King of space must die 
+Book 09 The King of space must die
 Book 10 The sting of the mustard mines
 Book 12 The Hunt for Reduk Topa
 Space team and a lot of weird space shizz
@@ -145,8 +145,8 @@ The Dresden Files, The Lae, book 17.5
 
 # Jack Vance
 The demon princes, book 1 - The Star King
-The demon princes, book 2 - The killing machine 
-The demon princes, book 3 - The palace of love 
+The demon princes, book 2 - The killing machine
+The demon princes, book 3 - The palace of love
 
 # Thomas Forsythe
 Bodega, tales of the bodegaverse
@@ -159,9 +159,12 @@ Urban Enemies A Collection of Urban Fantasy Stories
 
 ## Stephen King
 The Dark tower, book 1, The Gunslinger
-The Dark tower, book 2, The drawing of the three 
+The Dark tower, book 2, The drawing of the three
 The Dark tower, book 3, The wastelands
 
 ## Dennis E. Taylor
 Roadkill
 The singularity trap
+
+## Blake Crouch
+Dark Matter
