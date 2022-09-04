@@ -224,8 +224,13 @@ function howdoi() {
 	fi
 }
 
+BOOKSLIST=$HOME/z-stuff/books2022.txt
 function add-new_book() {
-	vim $HOME/z-stuff/books2022.txt
+	vim $BOOKSLIST
+}
+
+function get-last-read-book() {
+	cat $BOOKSLIST | tail -n1
 }
 
 function ip_show_my_public() {
@@ -287,4 +292,5 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 # fzf finder
 [ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
+
 ##########################
