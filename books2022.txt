@@ -8,6 +8,9 @@ The sagan diary (novella)
 The president's brain is missing (Short story)
 The Kaiju Preservation Society
 Redshirts
+the dispatcher, book 3, travel by bulllet
+The Interdependency, book 1, The Collapsing Empire
+The Interdependency, Book 2, The Consuming Fire
 
 ## Peter Clines
 Terminus
@@ -176,5 +179,6 @@ Quantum Evolution 1 - The Quantum Magician
 Quantum Evolution 2 - The Quantum Garden
 
 ## Ben Aaronovitch
-Book 1, Rivers of London
+Book 1 Rivers of London
 Book 2 Moon over Soho
+Book 3 Whispers Under Ground
