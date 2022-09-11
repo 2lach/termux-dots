@@ -11,6 +11,7 @@ Redshirts
 the dispatcher, book 3, travel by bulllet
 The Interdependency, book 1, The Collapsing Empire
 The Interdependency, Book 2, The Consuming Fire
+The Interdependency, Book 3, The Last Emperox
 
 ## Peter Clines
 Terminus
@@ -182,3 +183,6 @@ Quantum Evolution 2 - The Quantum Garden
 Book 1 Rivers of London
 Book 2 Moon over Soho
 Book 3 Whispers Under Ground
+
+## Ben H winters
+Self-help
