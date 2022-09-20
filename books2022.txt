@@ -155,6 +155,9 @@ The demon princes, book 3 - The palace of love
 # Thomas Forsythe
 Bodega, tales of the bodegaverse
 
+## Ben H winters
+Self-help
+
 # Inadvisably Compelled
 Paranoid Mage
 
@@ -180,9 +183,13 @@ Quantum Evolution 1 - The Quantum Magician
 Quantum Evolution 2 - The Quantum Garden
 
 ## Ben Aaronovitch
-Book 1 Rivers of London
-Book 2 Moon over Soho
-Book 3 Whispers Under Ground
+Rivers of London Book 1 Rivers of London
+Rivers of London Book 2 Moon over Soho
+Rivers of London Book 3 Whispers Under Ground
+Rivers of London Book 4 Broken homes
+Rivers of London Book 5 Foxglove Summer
+Rivers of London Book 5.5 The Furthest Station
+Rivers of London Book 6.5 A Rare Book of Cunning Device
 
-## Ben H winters
-Self-help
+## Wesley Chu
+The lives of Tao
