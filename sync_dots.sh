@@ -9,7 +9,7 @@ function sync() {
 
 # Folders
 
-declare -a folders=(".config" ".termux" "z-stuff/plugins" "z-stuff/scripts" "z-stuff/completions" "z-stuff/notes")
+declare -a folders=(".config" ".termux" "z-stuff/plugins" "z-stuff/scripts" "z-stuff/completions" "z-stuff/notes" ".vim")
 
 for i in "${folders[@]}"; do
 	echo "syncing folder: $i"
