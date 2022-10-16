@@ -23,4 +23,8 @@ for i in "${files[@]}"; do
 	sync "$i"
 done
 
+# remove duplicated and uneeded files
+rm -rfv /data/data/com.termux/files/home/z-stuff/dots/.vim/plugged
+rm -rfv /data/data/com.termux/files/home/z-stuff/dots/.config/cache
+
 echo 'sync completed' | lolcat
