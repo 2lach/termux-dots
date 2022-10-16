@@ -9,8 +9,7 @@ daily use:
 vim, vim-plug, ssh, gpg, git, z, starship, golang, nodejs, starship, tldr, nmap and more
 
 ```
-[looks like](./screenshot/screenshot-termux.png)
-
+![Setup-image Setup looks like this](./screenshot/screenshot-termux.png)
 
 This is the repo containing my dotfiles, scripts
 and various setups and configs is use from my phone.
