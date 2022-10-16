@@ -1,0 +1,6 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+echo "Update changelog"
+git-changelog -p >/dev/null 2>&1
+git add History.md
+git commit -m "changelog update"
