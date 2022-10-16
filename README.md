@@ -27,3 +27,4 @@ The setup script will install quite a few apt packages,node modules, gems, pips 
 I use my phone for notetaking (vim) system administration (mostly ssh) some scripting, deployments, testing and so on.
 It works for me and might work for you or atleast be a good place to start playing around with termux in a good enviroment with almost all basic setups already taken care of.
 
+For detailed change log view [History file](./History.md)
