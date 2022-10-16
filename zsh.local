@@ -31,6 +31,7 @@ alias gcm="git commit -m"
 alias shellformat="shfmt" # requires pkg 'shfmt'
 alias npm-list-globals="npm list -g --depth=0"
 alias gd="goodreads"
+alias agp='ag --pager="less -XFR"'
 
 # OMZ
 alias edit-zshrc="vim ~/.zshrc"
