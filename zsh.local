@@ -264,6 +264,9 @@ function date_format() {
 	echo $(date '+%Y-%m-%d')
 }
 
+function ip_show_my_local() {
+	ifconfig | grep broadcast | awk '{print $2}'
+}
 ##########################
 # ZSH SYSTEM TWEAKS
 ##########################
@@ -283,7 +286,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/scripts/.secrets
 . $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/scripts/man-colors.sh
-# . $HOME/z-stuff/scripts/welcomeZ.sh
 
 # cod > creates command completion with
 # $ command -h

@@ -25,7 +25,7 @@ $gem update
 $gem cleanup
 
 # add entry to logfile
-echo "\nAutomated system update completed" >>/data/data/com.termux/files/usr/var/log/sys_logs/system_updated.txt
+printf "\nAutomated system update completed\n" >>/data/data/com.termux/files/usr/var/log/sys_logs/system_updated.txt
 $date >>/data/data/com.termux/files/usr/var/log/sys_logs/system_updated.txt
 
 # show notification
