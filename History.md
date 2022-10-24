@@ -3,6 +3,9 @@ n.n.n / 2022-10-24
 ==================
 
 changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-10-24 21:10:28 +0200	| cc9f12d
+
+changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
 Date: 2022-10-24 19:49:22 +0200	| 60b1c5a
 
 * some updates to cron script thats update termux 	modified:   scripts/crons/cron-one.sh * little pipe fn that prints local ip addr 	modified:   zsh.local Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
