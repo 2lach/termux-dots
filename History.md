@@ -1,6 +1,12 @@
 
-n.n.n / 2022-10-24
+n.n.n / 2022-10-27
 ==================
+
+changelog note Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-10-27 09:49:53 +0200	| 5f2fb3a
+
+changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-10-24 21:10:36 +0200	| b91ddfc
 
 changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
 Date: 2022-10-24 21:10:28 +0200	| cc9f12d
