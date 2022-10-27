@@ -1,0 +1,4 @@
+find way to exclude "updated chsngelog" commit eother by includong in next
+push or cut from git log file
+current setup:
+git config --add changelog.format "%s %nDate: %C(yellow)%ai%x09%Creset%C(cyan)%C(bold)| %h%Creset%n%Creset%C(green)%Creset"
