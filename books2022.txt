@@ -55,9 +55,12 @@ Snow crash
 Flowers for Algernon
 
 ## Brandon Sanderson
-Stormlight archives, the book of kings, book 1
-Stormlight archives, words of radiance, book 2
-Stormlight archives, oathbringer, book 3
+Stormlight archives, The book of Kings, book 1
+Stormlight archives, Words of radiance, book 2
+Stormlight archives, Oathbringer, book 3
+The Reckoners, Book 1, Steelheart
+The Reckoners, Book 1.5, Mitosis
+The Reckoners, Book 2, Firefight
 
 ## Robert J. Sawyer
 Red planet blues
@@ -72,6 +75,7 @@ Hard Luck Hank, Stank delicious, book 5
 Hard Luck Hank, Robot farts, book 6
 Hard Luck Hank, Dumber than dead, book 7
 Hard Luck Hank, Frankly, book 9
+Hard Luck Hank, The fouth quadrant, book 10
 
 ## Ryan Hill
 The book of Bart, 1
