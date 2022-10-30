@@ -1,6 +1,12 @@
 
-n.n.n / 2022-10-27
+n.n.n / 2022-10-30
 ==================
+
+changes to htoprc and finished some more books Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-10-30 14:37:41 +0100	| 9a46b0d
+
+changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-10-27 09:49:58 +0200	| d132d9d
 
 changelog note Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
 Date: 2022-10-27 09:49:53 +0200	| 5f2fb3a
