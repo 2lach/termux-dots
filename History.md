@@ -1,6 +1,15 @@
 
-n.n.n / 2022-10-30
+n.n.n / 2022-11-05
 ==================
+
+modified:   .vimrc modified:   books2022.txt Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-11-05 19:55:21 +0100	| 7b4933f
+
+neofetch updates Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-11-05 19:54:57 +0100	| 812036e
+
+changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-10-30 14:37:50 +0100	| 951888c
 
 changes to htoprc and finished some more books Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
 Date: 2022-10-30 14:37:41 +0100	| 9a46b0d
