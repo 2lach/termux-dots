@@ -174,11 +174,6 @@ if has("autocmd")
         autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
 
-" set cursor
-let &t_SI = "\<Esc>]50;CursorShape=2\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=2\x7"
-
 " Cursor settings:
 "  1 -> blinking block
 "  2 -> solid block
@@ -186,6 +181,11 @@ let &t_EI = "\<Esc>]50;CursorShape=2\x7"
 "  4 -> solid underscore
 "  5 -> blinking vertical bar
 "  6 -> solid vertical bar
+
+" set cursor
+let &t_SI = "\<Esc>]50;CursorShape=2\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=2\x7"
 
 " Cursor Mode Settings
 let &t_SI.="\e[6 q" "SI = INSERT mode
@@ -210,7 +210,7 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""
 " ===  Airline ==== "
 """""""""""""""""""""
-let g:airline_theme='google_dark' " google_light papercolor
+let g:airline_theme='google_dark'
 let g:airline_extensions = []
 
 """""""""""""""""""""""""""""""
