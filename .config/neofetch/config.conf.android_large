@@ -1,39 +1,40 @@
-# see this wiki page for more info:
-# https://github.com/dylanaraps/neofetch/wiki/customizing-info
+# See this wiki page for more info:
+# https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
 print_info() {
-info cols
-info "Battery" battery
-info "CPU Usage" cpu_usage
-info "Disk" disk
-info "Font" font
-info "GPU Driver" gpu_driver  # Linux/macOS only
-info "Memory" memory
-info "CPU" cpu
-info "Host" model
-info "Kernel" kernel
-info "OS" distro
-info "Packages" packages
-info "Shell" shell
-info "Terminal" term
-info "Uptime" uptime
-# info "WM" wm
-info "Users" users
-info "Local IP" local_ip
-info "Public IP" public_ip
-info "Locale" locale  # This only works on glibc systems.
-#    info "Icons" icons
-#    info "Theme" theme
-#    info "WM Theme" wm_theme
-#    info title
-#    info underline
-#   info "DE" de
-#   info "GPU" gpu
-#   info "Resolution" resolution
-#   info "Terminal Font" term_font
-# [[ "$player" ]] && prin "Music Player" "$player"
+    info title
+    info underline
 
-# info "Song" song
+    info "OS" distro
+    info "Host" model
+    info "Kernel" kernel
+    info "Uptime" uptime
+    info "Packages" packages
+    info "Shell" shell
+    info "Resolution" resolution
+    info "DE" de
+    info "WM" wm
+    info "WM Theme" wm_theme
+    info "Theme" theme
+    info "Icons" icons
+    info "Terminal" term
+    info "Terminal Font" term_font
+    info "CPU" cpu
+    info "GPU" gpu
+    info "Memory" memory
 
+    # info "GPU Driver" gpu_driver  # Linux/macOS only
+     info "CPU Usage" cpu_usage
+    # info "Disk" disk
+    # info "Battery" battery
+    # info "Font" font
+    # info "Song" song
+    # [[ "$player" ]] && prin "Music Player" "$player"
+     info "Local IP" local_ip
+     info "Public IP" public_ip
+    # info "Users" users
+    # info "Locale" locale  # This only works on glibc systems.
+
+    info cols
 }
 
 # Title
@@ -60,7 +61,7 @@ title_fqdn="off"
 # Example:
 # on:  '4.8.9-1-ARCH'
 # off: 'Linux 4.8.9-1-ARCH'
-kernel_shorthand="off"
+kernel_shorthand="on"
 
 
 # Distro
@@ -100,7 +101,7 @@ os_arch="on"
 # on:   '2 days, 10 hours, 3 mins'
 # tiny: '2d 10h 3m'
 # off:  '2 days, 10 hours, 3 minutes'
-uptime_shorthand="tiny"
+uptime_shorthand="on"
 
 
 # Memory
@@ -169,7 +170,7 @@ shell_version="on"
 # Values: 'scaling_cur_freq', 'scaling_min_freq', 'scaling_max_freq', 'bios_limit'.
 # Flag:    --speed_type
 # Supports: Linux with 'cpufreq'
-# NOTE: Any file in 7'/sys/devices/system/cpu/cpu0/cpufreq' can be used as a value.
+# NOTE: Any file in '/sys/devices/system/cpu/cpu0/cpufreq' can be used as a value.
 speed_type="bios_limit"
 
 # CPU speed shorthand
@@ -182,7 +183,7 @@ speed_type="bios_limit"
 # Example:
 # on:    'i7-6500U (4) @ 3.1GHz'
 # off:   'i7-6500U (4) @ 3.100GHz'
-speed_shorthand="on"
+speed_shorthand="off"
 
 # Enable/Disable CPU brand in output.
 #
@@ -191,7 +192,7 @@ speed_shorthand="on"
 # Flag:    --cpu_brand
 #
 # Example:
-# on:   'Intel i7-67500U'
+# on:   'Intel i7-6500U'
 # off:  'i7-6500U (4)'
 cpu_brand="on"
 
@@ -547,7 +548,7 @@ underline_char="-"
 # Example:
 # separator="->":   'Shell-> bash'
 # separator=" =":   'WM = dwm'
-separator=" ->"
+separator=":"
 
 
 # Color Blocks
@@ -744,10 +745,7 @@ image_source="auto"
 #       Slackware, SunOS, LinuxLite, OpenSUSE, Raspbian,
 #       postmarketOS, and Void have a smaller logo variant.
 #       Use '{distro name}_small' to use the small variants.
-#ascii_distro="auto"
-#ascii_distro="Android_small"
-#ascii_distro="Arch"
-ascii_distro="BunsenLabs"
+ascii_distro="auto"
 
 # Ascii Colors
 #
@@ -764,7 +762,7 @@ ascii_colors=(distro)
 # Whether or not to bold the ascii logo.
 #
 # Default: 'on'
-				# Values:  'on', 'off'
+# Values:  'on', 'off'
 # Flag:    --ascii_bold
 ascii_bold="on"
 
