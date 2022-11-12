@@ -19,7 +19,8 @@ $aptget upgrade -y
 $aptget autoclean
 $aptget purge
 
-$pip list --outdated --format=freeze | $(which grep) --color -v '^\-e' | $(which cut) -d = -f 1 | $(which xargs) -n1 $pip install -U
+# cause upgrading pips fucks shit up
+# $pip list --outdated --format=freeze | $(which grep) --color -v '^\-e' | $(which cut) -d = -f 1 | $(which xargs) -n1 $pip install -U
 
 $gem update
 $gem cleanup
