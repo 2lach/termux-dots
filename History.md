@@ -1,6 +1,12 @@
 
-n.n.n / 2022-11-05
+n.n.n / 2022-11-12
 ==================
+
+tweaks Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-11-12 17:37:28 +0100	| 7534d69
+
+changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-11-05 19:55:53 +0100	| 315e0c4
 
 modified:   .vimrc modified:   books2022.txt Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
 Date: 2022-11-05 19:55:21 +0100	| 7b4933f
