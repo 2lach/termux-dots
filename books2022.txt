@@ -207,11 +207,14 @@ The Iron druid series - book 2 Hexed
 The Iron druid series - book 3 Hammered
 The Iron druid series - book 4 Tricked
 
-# Nicky Drayden
+## Nicky Drayden
 The prey of the gods
 
-# Christopher Moore
+## Christopher Moore
 Lamb: The Gospel According to Biff, Christ's Childhood Pal
 
-# George RR Martin
+## George RR Martin
 Fire & Blood
+
+## Harry Harrison
+Deathworld III
