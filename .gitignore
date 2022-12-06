@@ -6,6 +6,7 @@
 .config/pi/
 .config/private_not_synced_folder
 .config/pulse/
+.config/rc-files
 .config/tabtab/
 .config/todo.sh/
 .config/z/
