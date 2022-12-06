@@ -1,6 +1,15 @@
 
-n.n.n / 2022-11-12
+n.n.n / 2022-12-07
 ==================
+
+books and ignore Signed-off-by: Stefan Lachmann <stefanlachmann@hotmail.com> 
+Date: 2022-12-07 00:08:02 +0100	| 61ab656
+
+	modified:   books2022.txt Signed-off-by: Stefan Lachmann <stefanlachmann@hotmail.com> 
+Date: 2022-11-19 16:25:19 +0100	| 750af31
+
+changelog update Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
+Date: 2022-11-12 17:37:39 +0100	| 13808b4
 
 tweaks Signed-off-by: 2lach <stefanlachmann@hotmail.com> 
 Date: 2022-11-12 17:37:28 +0100	| 7534d69
