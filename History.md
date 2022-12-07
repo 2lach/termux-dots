@@ -2,8 +2,17 @@
 n.n.n / 2022-12-07
 ==================
 
+Merge branch 'master' of github.com:2lach/termux-dots Signed-off-by: Stefan Lachmann <stefanlachmann@hotmail.com> 
+Date: 2022-12-07 00:08:37 +0100	| aa58df4
+
+changelog update Signed-off-by: Stefan Lachmann <stefanlachmann@hotmail.com> 
+Date: 2022-12-07 00:08:11 +0100	| 0f1572b
+
 books and ignore Signed-off-by: Stefan Lachmann <stefanlachmann@hotmail.com> 
 Date: 2022-12-07 00:08:02 +0100	| 61ab656
+
+modified readme 
+Date: 2022-11-23 17:31:06 +0100	| 8463f05
 
 	modified:   books2022.txt Signed-off-by: Stefan Lachmann <stefanlachmann@hotmail.com> 
 Date: 2022-11-19 16:25:19 +0100	| 750af31
