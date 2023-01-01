@@ -150,7 +150,7 @@ The Dresden Files, Peace talks, book 16
 The Dresden Files, Battle grounds, book 17
 The Dresden Files, 12.5 - Side Jobs
 The Dresden Files, 15.5 - Brief Cases
-The Dresden Files, The Lae, book 17.5
+The Dresden Files, The Law, book 17.5
 Working for bigfoot
 
 # Jack Vance
@@ -196,6 +196,10 @@ Rivers of London Book 4 Broken homes
 Rivers of London Book 5 Foxglove Summer
 Rivers of London Book 5.5 The Furthest Station
 Rivers of London Book 6.5 A Rare Book of Cunning Device
+Rivers of London Book 6 The hanging tree
+Rivers of London Book 7 Lies sleeping
+Rivers of London Book 8 False values
+Rivers of London Book 9 amongst our weapons
 
 ## Wesley Chu
 The lives of Tao, book 1
@@ -223,3 +227,9 @@ Deathworld III
 ## C. Robert Cargill
 Sea of rust
 Day Zero
+
+## Jeremy Robinson
+Infinie
+
+## Clayton Smith
+apocalypticon
