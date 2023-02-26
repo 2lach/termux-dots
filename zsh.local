@@ -267,6 +267,11 @@ function date_format() {
 function ip_show_my_local() {
 	ifconfig | grep broadcast | awk '{print $2}'
 }
+
+function find_dupes() {
+	python3 "/data/data/com.termux/files/home/z-stuff/scripts/find_dupes.py" "$@"
+}
+
 ##########################
 # ZSH SYSTEM TWEAKS
 ##########################
