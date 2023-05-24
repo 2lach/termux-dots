@@ -22,6 +22,7 @@ The Reckoners book 1.5 - Mitosis
 The Reckoners book 2 - Firefight
 The Reckoners book 3 - Calamity
 The Reckoners book 4 - Lux
+The Frugal Wizard’s Handbook for Surviving Medieval England
 
 ## Peter Clines
 Ex-Heroes Book 1
@@ -70,6 +71,9 @@ Alpha and Omega
 Daemon
 Freedom
 Influx
+Kill decision
+Change agent
+Delta-V
 
 ## Neil Gaiman
 American Gods
@@ -91,3 +95,14 @@ The man who feel to earth
 ## Adrian Tchaikovsky
 Children of Time
 Children of Ruin
+
+## Will Wight
+The Captain, The last Horizan 1
+
+## A.G. Riddle
+Quantum Radio
+
+## Matt Dinniman
+Dungeon crawler Carl
+Carl's Doomsday Scenario, Book 2
+The Dungeon Anarchist's Cookbook, Book 3
