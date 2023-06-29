@@ -97,7 +97,5 @@ showPatch = true
 [log]
 date = relative
 
-[user]
-name = 2lach
-email = stefanlachmann@hotmail.com
-username = 2lach
+[include]
+path = ~/.gitconfig.local
