@@ -171,7 +171,9 @@ function aptu() {
 
 function pip_pkg_update() {
 	local pip="/data/data/com.termux/files/usr/bin/pip3"
-	$pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
+	#	$pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 $pip install -U
+
+	$pip --disable-pip-version-check list --outdated --format=json | python -c "import json, sys; print('\n'.join([x['name'] for x in json.load(sys.stdin)]))"
 }
 
 function add_system_update_datestamp() {
@@ -256,7 +258,6 @@ function system_update_log() {
 	# prints system updated logfile
 	cat $SYSTEM_LOG
 
-	#/data/data/com.termux/files/home/z-stuff/system_updated.txt
 }
 
 function date_format() {
@@ -282,19 +283,14 @@ setopt hist_ignore_all_dups
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 ##########################
-# PLUGINS/SCRIPTS
-# & PATH/COMPLETIONS
+# PLUGINS/SCRIPTS/COMPLETIONS
 ##########################
 
 #. $HOME/z-stuff/paths.sh
+#. $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/scripts/auto-ls.zsh
 . $HOME/z-stuff/scripts/.secrets
-#. $HOME/z-stuff/plugins/*/*.plugin.zsh
 . $HOME/z-stuff/scripts/man-colors.sh
-
-# cod > creates command completion with
-# $ command -h
-# cod.plugin.zsh loades in omz plugins (~/.zshrc)
 
 # netlify cli
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
