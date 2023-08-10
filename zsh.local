@@ -9,7 +9,7 @@
 alias g="git"
 alias c="clear"
 alias e="exit"
-alias qq="exit"
+alias j="jobs"
 alias mkd="mkdir -v"
 alias ca="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
 alias untar='tar xvf'

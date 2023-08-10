@@ -13,7 +13,7 @@ add_newline = true
 
 [character]       
 # Replace the "❯" symbol in the prompt with "➜"
-success_symbol = "[➤](bold green)"
+success_symbol = "[»](bold green)"
 error_symbol = "[➤](bold lightgreen)"
 
 # with custom vim shape
