@@ -178,14 +178,12 @@ function pip_pkg_update() {
 
 function add_system_update_datestamp() {
 
-	local date="/usr/bin/date"
+	d="/usr/bin/date"
+	SYSTEM_LOG="/data/data/com.termux/files/usr/var/log/sys_logs/system_updated.txt"
 
-	local termuxFiles="/data/data/com.termux/files"
-
-	local SYSTEM_LOG="$termuxFiles/usr/var/log/sys_logs/system_updated.txt"
-
-	(echo "System updated" | lolcat) >>$SYSTEM_LOG
-	($date && echo "") >>$SYSTEM_LOG
+	echo "System updated" | lolcat >>$SYSTEM_LOG
+	$d >>$SYSTEM_LOG
+	echo "" >>$SYSTEM_LOG
 }
 
 function system_update() {
@@ -273,6 +271,9 @@ function find_dupes() {
 	python3 "/data/data/com.termux/files/home/z-stuff/scripts/find_dupes.py" "$@"
 }
 
+function omv() {
+	ssh omv
+}
 ##########################
 # ZSH SYSTEM TWEAKS
 ##########################
