@@ -209,7 +209,7 @@ function system_update() {
 	gem cleanup
 
 	feco "UPDATE OMZ"
-	omz update >/dev/null
+	omz update
 	feco "omz update completed"
 
 	add_system_update_datestamp
