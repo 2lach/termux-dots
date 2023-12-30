@@ -106,6 +106,7 @@ Made things
 
 ## Will Wight
 The Captain, The last Horizan 1
+The Engineer, The last Horizan 2
 
 ## A.G. Riddle
 Quantum Radio
@@ -123,6 +124,7 @@ Villains Rule Book 1
 Villains Pride Book 2
 Villains Deception Book 3
 Villains Defeat Book 4
+Villains Return Book 5
 She dreams of fire, Book 1
 She wakes in water, Book 2
 To beat the devil, Technomancer Book 1
@@ -165,8 +167,16 @@ One tin soldier, a murder of crows, book 3
 
 ## John Scalzi
 Starter Villain
+The dispatcher
+Murder by any other means
+Travel by bullet
+Fuzzy nation
+Old mans war 1
+Ghost Brigade 2
+The Last Colony 3
+Human division 5
 
-##:Amal El-Mohtar
+## Amal El-Mohtar
 This is How You Lose the Time War
 
 ## Austin Grossman
@@ -177,3 +187,14 @@ Tales from the gas station 1
 Tales from the gas station 2
 Tales from the gas station 3
 Tales from the gas station 4
+
+## Josh Bazell
+Beat the reaper
+Wild Things
+
+## Richard K. Morgan
+Altered Carbon
+Broken Angels
+
+## Nick Harkaway
+Titanium Noir
