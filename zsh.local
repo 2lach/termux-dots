@@ -225,7 +225,7 @@ function howdoi() {
 	fi
 }
 
-BOOKSLIST=$HOME/z-stuff/books2023.txt
+BOOKSLIST=$HOME/z-stuff/books2024.txt
 function add-new_book() {
 	vim $BOOKSLIST
 }
@@ -244,12 +244,12 @@ function convert-mkv-to-mp4() {
 }
 
 function list-books() {
-	cat $HOME/z-stuff/books2023.txt
+	cat $BOOKSLIST
 }
 
 function count-books() {
 	# cat txtfile | sed ignore # and newlines | count remaining lines
-	cat $HOME/z-stuff/books2023.txt | sed '/^\s*#/d;/^\s*$/d' | wc -l
+	cat $BOOKSLIST | sed '/^\s*#/d;/^\s*$/d' | wc -l
 }
 
 function system_update_log() {
