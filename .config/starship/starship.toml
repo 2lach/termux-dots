@@ -6,7 +6,7 @@
 # format="$all$directory$character"
 
 # move the rest of the prompt to the right
-# right_format = """$all"""
+right_format = """$time"""
 
 # Inserts a blank line between shell prompts
 add_newline = true
@@ -20,7 +20,7 @@ error_symbol = "[➤](bold lightgreen)"
 vicmd_symbol = "[V](bold green) "
 
 [time]
-time_format = "%T"
-format = '[\[$time\]](italic gray) '
+time_format = "%H:%M"
+format = '[$time](italic gray) '
 style = "bright-white"
-disabled = true
+disabled = false 
