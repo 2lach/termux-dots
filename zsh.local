@@ -235,7 +235,7 @@ function get-last-read-book() {
 }
 
 function ip_show_my_public() {
-	myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+	myip="$(curl -s myip.dnsomatic.com)"
 	echo "My WAN/Public IP address: ${myip}"
 }
 
