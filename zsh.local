@@ -138,6 +138,11 @@ function duds() {
 	du -sh */ | sort -nr
 }
 
+function ls_count_files() {
+	# print the number of files in each dir
+	ls | parallel 'echo -n {}" "; ls {}|wc -l'
+}
+
 function feco() {
 	# ANNOUNINCING
 	# || LORD Feco of lolcat... ||
