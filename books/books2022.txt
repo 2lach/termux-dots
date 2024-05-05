@@ -1,118 +1,3 @@
-## John Scalzi
-The God Engine
-Androids dream
-Old Man's War, book 1
-Old Man's War, Ghost brigade, book 2
-Old Man's War, The last colony, book 3
-The sagan diary (novella)
-The president's brain is missing (Short story)
-The Kaiju Preservation Society
-Redshirts
-the dispatcher, book 3, travel by bulllet
-The Interdependency, book 1, The Collapsing Empire
-The Interdependency, Book 2, The Consuming Fire
-The Interdependency, Book 3, The Last Emperox
-
-## Peter Clines
-Terminus
-The Fold
-14
-Ex-heroes, book 1
-Ex-patriots, book 2
-Ex-Communication, Book 3
-Ex-Purgatory, Book 4
-Ex-Isle, Book 5
-Paradox bound
-The broken room
-
-## Daryl Gregory
-The Album of Dr. Moreau
-
-## Larry Niven
-Ringworld
-Ringworld engineers
-
-## Martha Wells
-All Systems Red, Book 1
-Artificial Condition, Book 2
-Rogue Protocol, Book 3
-Exit Strategy, Book 4
-Network effect, Book 5
-Fugitive Telemetry, Book 6
-
-## Drew Hayes
-Super Powereds, Year 1
-Super Powereds, Year 2
-
-## Mary Wollstonecraft Shelley
-Frankenstein
-
-## Neal Stepenson
-Cryptonomicon
-Snow crash
-
-## Daniel Keyes
-Flowers for Algernon
-
-## Brandon Sanderson
-Stormlight archives, The book of Kings, book 1
-Stormlight archives, Words of radiance, book 2
-Stormlight archives, Oathbringer, book 3
-The Reckoners, Book 1, Steelheart
-The Reckoners, Book 1.5, Mitosis
-The Reckoners, Book 2, Firefight
-The Reckoners, Book 3, Calamity
-
-## Robert J. Sawyer
-Red planet blues
-Hominids The Neanderthal Parallax, Book 1
-
-## Steven Campbell
-Hard Luck Hank, Screw the universe, book 1
-Hard Luck Hank, Basketful of crap, book 2
-Hard Luck Hank, Prince of suck, book 3
-Hard Luck Hank, Suck my cosmos, book 4
-Hard Luck Hank, Stank delicious, book 5
-Hard Luck Hank, Robot farts, book 6
-Hard Luck Hank, Dumber than dead, book 7
-Hard Luck Hank, Frankly, book 9
-Hard Luck Hank, The fouth quadrant, book 10
-
-## Ryan Hill
-The book of Bart, 1
-
-## Richard K Morgan
-Thin air
-Altered Carbon, Takeshi Kovacs, Book 1
-Broken angels, Takeshi Kovacs, Book 2
-Woken furies, Takeshi Kovacs, Book 3
-Market forces
-
-## Cory Doctorow
-Makers
-Radicalized
-Car wars
-Little brother, book 1
-Homeland, Little brother, book 2
-
-## Daniel Rigby
-Isaac Steele and the forever man
-
-## M.K Gibson
-Deicide agents of MORTAL
-Villains Rule, book 1
-Villains Pride, book 2
-Villains deception, book 3
-To beat the Devil, Book 1
-Flotsom prison blues, book 2
-Angels and the bad man, book 3
-One piece at the time, book 4
-
-## C.T. Phipps
-Straight outta Fangton,book 1
-100 miles and vampin, book 2
-Vampiraz 4 life
-
 ## Barry J. hutchison
 Book 01 Space Team
 Book 02 The Wrath of Vajazzle
@@ -125,68 +10,10 @@ Book 08 The Time Titan of Tomorrow
 Book 09 The King of space must die
 Book 10 The sting of the mustard mines
 Book 12 The Hunt for Reduk Topa
-Space team and a lot of weird space shizz
-Dial D for Deadman, Dan Deadman, Book 1
 Dead Inside, Dan Deadman Space Detective, Book 2
 Dead in the Water, Dan Deadman Space Detective, Book 3
-
-## Jim Butcher
-The Dresden files, Storm front, book 1
-The Dresden files, Fool moon, book 2
-The Dresden files, Grave peril, book 3
-The Dresden Files, Summer Knight, book 4
-The Dresden Files, Death Masks, book 5
-The Dresden Files, Blood Rites, book 6
-The Dresden Files, Dead beat, book 7
-The Dresden Files, Proven guilty, book 8
-The Dresden Files, White night, book 9
-The Dresden Files, Small favor, book 10
-The Dresden Files, Turn Coat, book 11
-The Dresden Files, Changes, book 12
-The Dresden Files, Ghost Story, book 13
-The Dresden Files, Cold days, book 14
-The Dresden Files, Skin game, book 15
-The Dresden Files, Peace talks, book 16
-The Dresden Files, Battle grounds, book 17
-The Dresden Files, 12.5 - Side Jobs
-The Dresden Files, 15.5 - Brief Cases
-The Dresden Files, The Law, book 17.5
-Working for bigfoot
-
-# Jack Vance
-The demon princes, book 1 - The Star King
-The demon princes, book 2 - The killing machine
-The demon princes, book 3 - The palace of love
-
-# Thomas Forsythe
-Bodega, tales of the bodegaverse
-
-## Ben H winters
-Self-help
-
-# Inadvisably Compelled
-Paranoid Mage
-
-# Various authors, anthologies, collections
-Urban Enemies A Collection of Urban Fantasy Stories
-
-## Stephen King
-The Dark tower, book 1, The Gunslinger
-The Dark tower, book 2, The drawing of the three
-The Dark tower, book 3, The wastelands
-
-## Dennis E. Taylor
-Roadkill
-The singularity trap
-
-## Blake Crouch
-Dark Matter
-upgrade
-Recursion
-
-## Derek Kunsken
-Quantum Evolution 1 - The Quantum Magician
-Quantum Evolution 2 - The Quantum Garden
+Dial D for Deadman, Dan Deadman, Book 1
+Space team and a lot of weird space shizz
 
 ## Ben Aaronovitch
 Rivers of London Book 1 Rivers of London
@@ -195,28 +22,75 @@ Rivers of London Book 3 Whispers Under Ground
 Rivers of London Book 4 Broken homes
 Rivers of London Book 5 Foxglove Summer
 Rivers of London Book 5.5 The Furthest Station
-Rivers of London Book 6.5 A Rare Book of Cunning Device
 Rivers of London Book 6 The hanging tree
+Rivers of London Book 6.5 A Rare Book of Cunning Device
 Rivers of London Book 7 Lies sleeping
 Rivers of London Book 8 False values
 Rivers of London Book 9 amongst our weapons
 
-## Wesley Chu
-The lives of Tao, book 1
-The deaths of Tao, book 2
-The rebirths of Tao, book 3
+## Ben H winters
+# Inadvisably Compelled
+# Various authors, anthologies, collections
+Paranoid Mage
+Self-help
+Urban Enemies A Collection of Urban Fantasy Stories
 
-## Kevin Hearne
-The Iron druid series - book 1 hounded
-The Iron druid series - book 2 Hexed
-The Iron druid series - book 3 Hammered
-The Iron druid series - book 4 Tricked
+## Blake Crouch
+Dark Matter
+Recursion
+upgrade
 
-## Nicky Drayden
-The prey of the gods
+## Brandon Sanderson
+Stormlight archives, Oathbringer, book 3
+Stormlight archives, The book of Kings, book 1
+Stormlight archives, Words of radiance, book 2
+The Reckoners, Book 1, Steelheart
+The Reckoners, Book 1.5, Mitosis
+The Reckoners, Book 2, Firefight
+The Reckoners, Book 3, Calamity
+
+## C. Robert Cargill
+Day Zero
+Sea of rust
+
+## C.T. Phipps
+100 miles and vampin, book 2
+Straight outta Fangton,book 1
+Vampiraz 4 life
 
 ## Christopher Moore
 Lamb: The Gospel According to Biff, Christ's Childhood Pal
+
+## Clayton Smith
+apocalypticon
+
+## Cory Doctorow
+Car wars
+Homeland, Little brother, book 2
+Little brother, book 1
+Makers
+Radicalized
+
+## Daniel Keyes
+Flowers for Algernon
+
+## Daniel Rigby
+Isaac Steele and the forever man
+
+## Daryl Gregory
+The Album of Dr. Moreau
+
+## Dennis E. Taylor
+Roadkill
+The singularity trap
+
+## Derek Kunsken
+Quantum Evolution 1 - The Quantum Magician
+Quantum Evolution 2 - The Quantum Garden
+
+## Drew Hayes
+Super Powereds, Year 1
+Super Powereds, Year 2
 
 ## George RR Martin
 Fire & Blood
@@ -224,12 +98,135 @@ Fire & Blood
 ## Harry Harrison
 Deathworld III
 
-## C. Robert Cargill
-Sea of rust
-Day Zero
-
 ## Jeremy Robinson
 Infinie
 
-## Clayton Smith
-apocalypticon
+## Jim Butcher
+# Jack Vance
+# Thomas Forsythe
+Bodega, tales of the bodegaverse
+The Dresden Files, 12.5 - Side Jobs
+The Dresden Files, 15.5 - Brief Cases
+The Dresden Files, Battle grounds, book 17
+The Dresden Files, Blood Rites, book 6
+The Dresden Files, Changes, book 12
+The Dresden Files, Cold days, book 14
+The Dresden Files, Dead beat, book 7
+The Dresden Files, Death Masks, book 5
+The Dresden Files, Ghost Story, book 13
+The Dresden Files, Peace talks, book 16
+The Dresden Files, Proven guilty, book 8
+The Dresden Files, Skin game, book 15
+The Dresden Files, Small favor, book 10
+The Dresden Files, Summer Knight, book 4
+The Dresden Files, The Law, book 17.5
+The Dresden Files, Turn Coat, book 11
+The Dresden Files, White night, book 9
+The Dresden files, Fool moon, book 2
+The Dresden files, Grave peril, book 3
+The Dresden files, Storm front, book 1
+The demon princes, book 1 - The Star King
+The demon princes, book 2 - The killing machine
+The demon princes, book 3 - The palace of love
+Working for bigfoot
+
+## John Scalzi
+Androids dream
+Old Man's War, Ghost brigade, book 2
+Old Man's War, The last colony, book 3
+Old Man's War, book 1
+Redshirts
+The God Engine
+The Interdependency, Book 2, The Consuming Fire
+The Interdependency, Book 3, The Last Emperox
+The Interdependency, book 1, The Collapsing Empire
+The Kaiju Preservation Society
+The president's brain is missing (Short story)
+The sagan diary (novella)
+the dispatcher, book 3, travel by bulllet
+
+## Kevin Hearne
+The Iron druid series - book 1 hounded
+The Iron druid series - book 2 Hexed
+The Iron druid series - book 3 Hammered
+The Iron druid series - book 4 Tricked
+
+## Larry Niven
+Ringworld
+Ringworld engineers
+
+## M.K Gibson
+Angels and the bad man, book 3
+Deicide agents of MORTAL
+Flotsom prison blues, book 2
+One piece at the time, book 4
+To beat the Devil, Book 1
+Villains Pride, book 2
+Villains Rule, book 1
+Villains deception, book 3
+
+## Martha Wells
+All Systems Red, Book 1
+Artificial Condition, Book 2
+Exit Strategy, Book 4
+Fugitive Telemetry, Book 6
+Network effect, Book 5
+Rogue Protocol, Book 3
+
+## Mary Wollstonecraft Shelley
+Frankenstein
+
+## Neal Stepenson
+Cryptonomicon
+Snow crash
+
+## Nicky Drayden
+The prey of the gods
+
+## Peter Clines
+14
+Ex-Communication, Book 3
+Ex-Isle, Book 5
+Ex-Purgatory, Book 4
+Ex-heroes, book 1
+Ex-patriots, book 2
+Paradox bound
+Terminus
+The Fold
+The broken room
+
+## Richard K Morgan
+Altered Carbon, Takeshi Kovacs, Book 1
+Broken angels, Takeshi Kovacs, Book 2
+Market forces
+Thin air
+Woken furies, Takeshi Kovacs, Book 3
+
+## Robert J. Sawyer
+Hominids The Neanderthal Parallax, Book 1
+Red planet blues
+
+## Ryan Hill
+The book of Bart, 1
+
+## Stephen King
+The Dark tower, book 1, The Gunslinger
+The Dark tower, book 2, The drawing of the three
+The Dark tower, book 3, The wastelands
+
+## Steven Campbell
+Hard Luck Hank, Basketful of crap, book 2
+Hard Luck Hank, Dumber than dead, book 7
+Hard Luck Hank, Frankly, book 9
+Hard Luck Hank, Prince of suck, book 3
+Hard Luck Hank, Robot farts, book 6
+Hard Luck Hank, Screw the universe, book 1
+Hard Luck Hank, Stank delicious, book 5
+Hard Luck Hank, Suck my cosmos, book 4
+Hard Luck Hank, The fouth quadrant, book 10
+
+## Wesley Chu
+The deaths of Tao, book 2
+The lives of Tao, book 1
+The rebirths of Tao, book 3
+
