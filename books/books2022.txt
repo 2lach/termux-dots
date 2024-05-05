@@ -29,11 +29,7 @@ Rivers of London Book 8 False values
 Rivers of London Book 9 amongst our weapons
 
 ## Ben H winters
-# Inadvisably Compelled
-# Various authors, anthologies, collections
-Paranoid Mage
 Self-help
-Urban Enemies A Collection of Urban Fantasy Stories
 
 ## Blake Crouch
 Dark Matter
@@ -98,13 +94,18 @@ Fire & Blood
 ## Harry Harrison
 Deathworld III
 
+## Inadvisably Compelled
+Paranoid Mage
+
+## Jack Vance
+The demon princes, book 1 - The Star King
+The demon princes, book 2 - The killing machine
+The demon princes, book 3 - The palace of love
+
 ## Jeremy Robinson
 Infinie
 
 ## Jim Butcher
-# Jack Vance
-# Thomas Forsythe
-Bodega, tales of the bodegaverse
 The Dresden Files, 12.5 - Side Jobs
 The Dresden Files, 15.5 - Brief Cases
 The Dresden Files, Battle grounds, book 17
@@ -125,9 +126,6 @@ The Dresden Files, White night, book 9
 The Dresden files, Fool moon, book 2
 The Dresden files, Grave peril, book 3
 The Dresden files, Storm front, book 1
-The demon princes, book 1 - The Star King
-The demon princes, book 2 - The killing machine
-The demon princes, book 3 - The palace of love
 Working for bigfoot
 
 ## John Scalzi
@@ -224,6 +222,12 @@ Hard Luck Hank, Screw the universe, book 1
 Hard Luck Hank, Stank delicious, book 5
 Hard Luck Hank, Suck my cosmos, book 4
 Hard Luck Hank, The fouth quadrant, book 10
+
+## Thomas Forsythe
+Bodega, tales of the bodegaverse
+
+## Various authors, anthologies, collections
+Urban Enemies A Collection of Urban Fantasy Stories
 
 ## Wesley Chu
 The deaths of Tao, book 2
