@@ -9,7 +9,7 @@ def read_and_sort_books(input_file):
         for line in file:
             line = line.strip()
             if line.startswith('##'):
-                current_author = line[3:].strip()
+                current_author = line[3:].strip().title()
                 if current_author not in authors:
                     authors[current_author] = []
             elif line:
@@ -22,6 +22,7 @@ def read_and_sort_books(input_file):
             output_file.write(f"## {author}\n")
             sorted_books = sorted(authors[author])
             for book in sorted_books:
+                book = book.title()
                 output_file.write(f"{book}\n")
             # Add a blank line after each author's list
             output_file.write("\n")  
