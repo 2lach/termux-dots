@@ -1,4 +1,19 @@
-# books_sort.py
+# sort_books
+# well it sorts my books alphabetically 
+# by author and then by the books beloning to that author 
+
+# syntax rules
+# script expects the author name follow double hash
+# and then that authors books then a newline and new author
+
+##########
+# example
+# ## author laatname
+# book 1
+# book 2
+#
+# ## writer surname
+# book 1
 
 def read_and_sort_books(input_file):
     authors = {}
