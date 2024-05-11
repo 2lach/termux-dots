@@ -14,8 +14,6 @@ An Old Man's Game
 
 ## Barry J Hutchinson
 Space Team, Book 1
-Space Team, Book 10
-Space Team, Book 11
 Space Team, Book 2
 Space Team, Book 3
 Space Team, Book 4
@@ -24,6 +22,8 @@ Space Team, Book 6
 Space Team, Book 7
 Space Team, Book 8
 Space Team, Book 9
+Space Team, Book 10
+Space Team, Book 11
 
 ## Brian Cranston
 A Life In Parts
@@ -60,12 +60,12 @@ Old Mans War Book 6 - All Things End
 The Rise Of Oshbob, Artem Underworld Book 1
 
 ## Matt Dinniman
-Carl's Doomsday Scenario, Book 2
-Dungeon Crawler Carl, Book 1
-The Butchers Masquerade, Book 5
-The Gate Of The Feral Gods, Book 4
-The Anarchists Cookbook, Book 3
-The Eye Of The Bedlam Bride, Book 6
+Book 1, Dungeon Crawler Carl
+Book 2, Carl's Doomsday Scenario
+Book 3, The Anarchists Cookbook,
+Book 4, The Gate Of The Feral Gods
+Book 5, The Butchers Masquerade
+Book 6, The Eye Of The Bedlam Bride
 
 ## Michael Lewis
 Going Inifite
