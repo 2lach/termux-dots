@@ -99,3 +99,5 @@ date = relative
 
 [include]
 path = ~/.gitconfig.local
+[icdiff]
+	options = --highlight --line-numbers
