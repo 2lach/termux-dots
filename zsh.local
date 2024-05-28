@@ -42,7 +42,7 @@ alias edit-ohmyzsh="vim ~/.oh-my-zsh"
 alias pip2="/data/data/com.termux/files/usr/bin/pip"
 alias pip="/data/data/com.termux/files/usr/bin/pip3"
 alias pip-search="pip_search"
-
+alias py="python"
 # pip search options:
 # pip_search -s name
 # pip_search -s version
@@ -229,8 +229,7 @@ function howdoi() {
 		$(which hors) "$@" -a -n 3 -p never
 	fi
 }
-
-BOOKSLIST=$HOME/z-stuff/books2024.txt
+BOOKSLIST=$HOME/z-stuff/dots/books2024.txt
 function add-new_book() {
 	vim $BOOKSLIST
 }
