@@ -8,7 +8,7 @@
 
 ##########
 # example
-# ## author laatname
+# ## author lastname
 # book 1
 # book 2
 #
@@ -24,7 +24,7 @@ def read_and_sort_books(input_file):
         for line in file:
             line = line.strip()
             if line.startswith('##'):
-                current_author = line[3:].strip().title()
+                current_author = line[3:].title()
                 if current_author not in authors:
                     authors[current_author] = []
             elif line:
