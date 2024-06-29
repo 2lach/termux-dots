@@ -111,6 +111,9 @@ book 3, one foot in the fade
 ## Drew Hayes
 Fred the accountant vampire, book 1
 Fred the accountant vampire, book 2
+Fred the accountant vampire, book 3
+Fred the accountant vampire, book 4
+Fred the accountant vampire, book 5
 
 ## Will Wight
 The horizon book 3, the knight
