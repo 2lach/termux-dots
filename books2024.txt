@@ -33,7 +33,8 @@ A Life In Parts
 ## Chris Tullbane
 Ghost Of A Chance, John Smith Book 3
 The Italian Screwjob, John Smith Book 4
-The Stars That Sing Stories From A Post-Break World
+The Stars That Sing, Stories From A Post-Break World
+A sure thing, Stories From A Post-Break World
 
 ## Cory Doctorow
 The Bezzle, Martin Heck, Book 2
@@ -114,6 +115,15 @@ Fred the accountant vampire, book 2
 Fred the accountant vampire, book 3
 Fred the accountant vampire, book 4
 Fred the accountant vampire, book 5
+Fred the accountant vampire, book 6
+Fred the accountant vampire, book 7
+Fred the accountant vampire, book 8
 
 ## Will Wight
 The horizon book 3, the knight
+
+## Susanne Palmer
+the finder chronicles, Finder
+
+## Django Wexler
+How to become a dark lord and die trying
