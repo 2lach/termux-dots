@@ -127,3 +127,5 @@ the finder chronicles, Finder
 
 ## Django Wexler
 How to become a dark lord and die trying
+Book 1 Ashes of the sun
+Book 2 Blood of the chosen
