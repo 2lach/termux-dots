@@ -155,3 +155,11 @@ Book 1 Storm front, The dresden files
 Book 2 Fool moon, The dresden files
 Book 3 Grave peril, The dresden files
 Book 4 Summer knight, The dresden files
+Book 5 Death masks, The dresden files
+Book 6 Blood rites, The dresden files
+Book 7 Dead Beat, The dresden files
+Book 8 Proven Guilty, The dresden files
+Book 9 White night, The dresden files
+Book 10 Small favor, The dresden files
+Book 11 Turn coat, The dresden files
+Book 12 changes, The dresden files
