@@ -163,3 +163,5 @@ Book 9 White night, The dresden files
 Book 10 Small favor, The dresden files
 Book 11 Turn coat, The dresden files
 Book 12 changes, The dresden files
+Book 13 Ghost story, The dresden files
+Book 14 Cold days, The dresden files
