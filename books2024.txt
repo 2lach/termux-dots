@@ -165,3 +165,5 @@ Book 11 Turn coat, The dresden files
 Book 12 changes, The dresden files
 Book 13 Ghost story, The dresden files
 Book 14 Cold days, The dresden files
+Book 15 Skin game, The dresden files
+Book 16 peace talks, The dresden files
