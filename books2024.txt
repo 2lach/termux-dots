@@ -13,6 +13,7 @@ Service model
 Saturation Point
 Walking to Aldebaran
 Spiderlight
+Cage of souls
 
 ## Andy Weinberger
 An Old Man's Game
@@ -177,6 +178,7 @@ Book 17.5 The law, The dresden files
 
 ## Denis E. Taylor
 Not Till We Are Lost, Bobiverse book 5
+Singularity trap
 
 ## K.J. Parker
 The devil you know
@@ -189,3 +191,5 @@ the fith watch friendly fire
 Book 1, The (Sort of) Dark Mage Waldo Rabbit Series
 Book 2, After the Rabbit Waldo Rabbit Series
 Book 3, The rabbit great and terrible
+Book 4, The rabbit who lived
+Book 3, Rabbit the barbarian
