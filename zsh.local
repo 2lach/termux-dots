@@ -229,7 +229,7 @@ function howdoi() {
 		$(which hors) "$@" -a -n 3 -p never
 	fi
 }
-BOOKSLIST=$HOME/z-stuff/dots/books2024.txt
+BOOKSLIST=$HOME/z-stuff/dots/books2025.txt
 function add-new_book() {
 	vim $BOOKSLIST
 }

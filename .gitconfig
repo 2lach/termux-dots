@@ -100,4 +100,11 @@ date = relative
 [include]
 path = ~/.gitconfig.local
 [icdiff]
-	options = --highlight --line-numbers
+options = --highlight --line-numbers
+[credential "https://github.com"]
+helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential]
+username = 2lach
+helper = cache --timeout=3600
