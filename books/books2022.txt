@@ -234,4 +234,4 @@ Book 1, The Lives Of Tao
 Book 2, The Deaths Of Tao
 Book 3, The Rebirths Of Tao
 
-Total nr of books read 2023: 158
+Books read 2022: 158
