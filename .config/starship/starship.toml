@@ -24,3 +24,13 @@ time_format = "%H:%M"
 format = '[$time](italic gray) '
 style = "bright-white"
 disabled = false 
+
+[username]
+# style_user = '(bold yellow)'
+# style_root = 'black bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+aliases = { "anonymous" = "2lach" }
+
+

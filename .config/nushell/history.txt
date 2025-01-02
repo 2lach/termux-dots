@@ -1,0 +1,43 @@
+lsa
+exi5
+ezit
+exit
+cd .config/nushell/
+ls
+cat history.txt
+vim env.nu
+vim config.nu
+exit
+e
+exit
+ll
+lsa
+z 
+cd z-stuff/
+ls
+cd dots/
+g s
+ga
+g a
+g diff
+g di
+g a
+g cm "addee some books"
+gp
+pwd
+$nu.env-path
+cd .config/nushell/
+v env.nu
+vim zsh_local.nu
+exiy
+exit
+ls
+ps
+cd .config/nushell/
+ls
+vim zsh_local.nu
+vim config.nu
+ls
+exit
+ls
+nu -h
