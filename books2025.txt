@@ -5,6 +5,7 @@ The Automatic Detective
 Book 01 - Xenos
 Book 02 - Malleu
 Book 03 Hereticus
+Book 04 Magos
 
 ## Edward Savio
 Alexander X Battle For Forever, Book 1
@@ -18,3 +19,6 @@ The Thief Who Couldn't Sleep
 ## Nelson Chereta
 Dr. Anarchy’S Rules For World Domination (Or How I Became God-Emperor Of Rhode Island)
 
+## Martha Wells
+All systems red
+Artificial condition
