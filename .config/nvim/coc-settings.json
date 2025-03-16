@@ -1,0 +1,61 @@
+{
+  "coc.preferences.extensionUpdateCheck": "weekly",
+  "coc.preferences.formatOnSave": true,
+  "diagnostic.checkCurrentLine": true,
+  "codeLens.enable": true,
+  "suggest.autoTrigger": "always",
+  "diagnostic.enableSign": true,
+  "diagnostic.errorSign": "➤",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "Ⓘ ",
+  "diagnostic.hintSign": "*",
+  "signature.target": "float",
+  "suggest.detailField": "preview",
+  "suggest.snippetIndicator": " ",
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.completionItemKindLabels": {
+    "keyword": "",
+    "variable": "",
+    "value": "",
+    "operator": "Ψ",
+    "function": "ƒ",
+    "reference": "渚",
+    "constant": "",
+    "method": "",
+    "struct": "פּ",
+    "class": "",
+    "interface": "",
+    "text": "",
+    "enum": "",
+    "enumMember": "",
+    "module": "",
+    "color": "",
+    "property": "",
+    "field": "料",
+    "unit": "",
+    "event": "鬒",
+    "file": "",
+    "folder": "",
+    "snippet": "",
+    "typeParameter": "",
+    "default": ""
+  },
+  "languageserver": {
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"]
+    },
+
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  }
+}
