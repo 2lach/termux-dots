@@ -55,6 +55,7 @@ Angels and the bad man
 One piece at the time
 She dreams of fire, hammer of witches
 she wakes in water, hammer of witches
+Villains Academy
 
 ## Robert A Heinlein
 The moon is a harsh mistress
@@ -81,3 +82,9 @@ Walking to Aldebaran
 One Day All This Will Be Yours
 The dogs of war
 Bear head
+
+## Dennis E. Taylor
+Flybot
+
+## Django Wexler
+Everbody wants to rule the world, except me
