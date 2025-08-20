@@ -7,6 +7,7 @@ One Day All This Will Be Yours
 Spiderlight
 The Dogs Of War
 Walking To Aldebaran
+The hungry gods
 
 ## Alexander Olson
 The Ends Of Magic, Book 4, Anarchist
@@ -76,7 +77,7 @@ The Butcher's Masquerade, Book 5
 The Dungeon Anarchist's Cookbook, Book 3
 The Eye Of The Bedlam Bride, Book 6
 The Gate Of The Feral Gods, Book 4
-This Inevitable Ruin
+This Inevitable Ruin, Book 7
 
 ## Nelson Chereta
 Dr. Anarchy’s Rules For World Domination (or How I Became God-emperor Of Rhode Island)quest For The Holy Rabbit, Book 6
@@ -99,3 +100,8 @@ Caverns Creatures Bookres Cavern Book 1
 American Assassin
 Kill Shot
 
+## Will Wight
+The Pilot, Book 4
+
+## Philip K. Dick
+The variable man
