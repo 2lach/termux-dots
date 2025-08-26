@@ -10,7 +10,8 @@
 .config/tabtab/
 .config/todo.sh/
 .config/z/
-.config/zsh/
+.config/zsh/.zcompdum*
+.config/zsh/.zsh_history
 .ideas
 .local
 .oh-my-zsh
