@@ -108,3 +108,9 @@ The variable man
 
 ## Daniel Keyes
 Flowers for algernon
+
+## Barry J Hutchison
+Book 1, Space team
+Book 2, The Wrath of Vajazzle
+Book 3, The search for splurt
+Book 4, The song of the space siren 
