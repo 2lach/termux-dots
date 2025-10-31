@@ -75,28 +75,29 @@ set title                                " Show the filename in the window title
 if (has("termguicolors"))
 	set termguicolors
 endif
-" colorscheme molotov
-colorscheme seoul256
+colorscheme molotov
+" colorscheme seoul256
 " colorscheme OceanicNext 
 " colorscheme dracula
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" System settings
+"""""""""""""""""""""""""""""""""""""" System settings
 """""""""""""""""
-
 " open new split panes to right and below
 set splitright
 set splitbelow
 
-" debug bode issues
+" debug node issues
 " let g:node_client_debug = 1
 
 " disable perl from loading
 let g:loaded_perl_provider=0
 " python paths
-let g:python_host_prog='/opt/homebrew/bin/python3'
-let g:ruby_host_prog='/usr/bin/ruby'
+let g:python_host_prog='/data/data/com.termux/files/usr/bin/python3'
+let g:ruby_host_prog='/data/data/com.termux/files/usr/bin/ruby'
+let g:go_host_prog='/data/data/com.termux/files/usr/bin/go'
+
+autocmd BufWritePre *.py,*.yaml,*.yml,*.go,Dockerfile,*.json :CocCommand editor.action.formatDocument
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""
