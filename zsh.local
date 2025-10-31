@@ -1,5 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash
-
+#!/data/data/com.termux/files/usr/bin/zsh
 ##########################
 # ALIASES
 ##########################
@@ -14,10 +13,10 @@ alias mkd="mkdir -v"
 alias ca="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
 alias untar='tar xvf'
 ## LIST
-alias l="exa -lah --sort=Name"
-alias ll="exa --icons --sort=type --changed -aFxnG"
-alias la="exa --icons -a"
-alias lsa="exa --icons --sort=type -alh"
+alias l="eza -lah --sort=Name"
+alias ll="eza --icons --sort=type --changed -axnG"
+alias la="eza --icons -a"
+alias lsa="eza --icons --sort=type -alh"
 
 # GIT
 alias gs="git status"
@@ -57,10 +56,11 @@ function vimrc() {
 
 # vim
 function v() {
+	# use nvim as defauli
 	if [ "$#" -eq 0 ]; then
-		vim .
+		nvim .
 	else
-		vim "$@"
+		nvim "$@"
 	fi
 }
 
@@ -108,16 +108,16 @@ function lst() {
 
 	# no arg use default
 	if [ $# -eq 0 ]; then
-		exa --tree --level=2
+		eza --tree --level=2
 
 	elif ! [[ $1 =~ $re ]]; then
 		# $1 is Not a number"
 		# meaning its likely a path/folder
-		exa --tree --level=2 $1
+		eza --tree --level=2 $1
 
 	else
 		# $1 exists and is a number meaning depth/level
-		exa --tree --level=$1
+		eza --tree --level=$1
 	fi
 
 }
@@ -208,10 +208,10 @@ function system_update() {
 	pip_pkg_update
 	pip cache purge
 
-	feco "UPDATE GEMS"
-	gem outdated
-	gem update
-	gem cleanup
+	#	feco "UPDATE GEMS"
+	#	gem outdated
+	#	gem update
+	#	gem cleanup
 
 	feco "UPDATE OMZ"
 	omz update
@@ -231,7 +231,7 @@ function howdoi() {
 }
 BOOKSLIST=$HOME/z-stuff/dots/books2025.txt
 function add-new_book() {
-	vim $BOOKSLIST
+	nvim $BOOKSLIST
 }
 
 function get-last-read-book() {
