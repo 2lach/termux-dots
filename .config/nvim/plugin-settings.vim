@@ -125,9 +125,21 @@ set hidden
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" setup for javascript, node.js, typescript, bash (zsh), go, html, css, react,
-" json
 let g:coc_global_extensions = ['coc-solargraph']
+" Coc.nvim settings
+" Autoformat på save
+autocmd BufWritePre *.py,*.yaml,*.yml,*.go,Dockerfile :CocCommand editor.action.formatDocument
+
+" Optional: tabstopp och indentation per språk
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType go setlocal tabstop=4 shiftwidth=4 noexpandtab
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType dockerfile setlocal tabstop=2 shiftwidth=2 noexpandtab
+
+" Coc.nvim keybindings (valfritt)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> K :call CocActionAsync('doHover')<CR>
 
 """"""""""""""""""
 " === Neoformat ==== "

@@ -25,24 +25,24 @@ Plug 'sheerun/vim-polyglot'							" syntax highlighting for almost *
 " Plug 'mxw/vim-jsx'                          		" ReactJS JSX syntax highlighting
 Plug 'peitalin/vim-jsx-typescript'				
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'othree/javascript-libraries-syntax.vim' 
-" Javascript libraries
+Plug 'othree/javascript-libraries-syntax.vim' 		" Javascript libraries
 Plug 'pangloss/vim-javascript'
 Plug 'honza/dockerfile.vim'
 Plug 'ap/vim-css-color'
-Plug 'vim-syntastic/syntastic'						
-" Syntastic is a syntax checking plugin
+Plug 'vim-syntastic/syntastic'										" Syntastic is a syntax checking plugin
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 
 " === Utilities === "
-Plug 'folke/which-key.nvim'
+" Plug 'folke/which-key.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'												" tree explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'							" git status in nerdtree
 Plug 'simnalamburt/vim-mundo'               		" undo tree
 Plug 'tpope/vim-commentary'	 										" comment out/in lines (gcc || gc)
+Plug 'github/copilot.vim'                           " github copilot
+
 " Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'            " highlights yanks
 
