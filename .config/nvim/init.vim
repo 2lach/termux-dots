@@ -75,7 +75,8 @@ set title                                " Show the filename in the window title
 if (has("termguicolors"))
 	set termguicolors
 endif
-colorscheme molotov
+colorscheme tokyonight-moon
+" colorscheme molotov
 " colorscheme seoul256
 " colorscheme OceanicNext 
 " colorscheme dracula

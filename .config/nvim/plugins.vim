@@ -21,29 +21,26 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " === Syntax === "
 Plug 'sheerun/vim-polyglot'							" syntax highlighting for almost *
-" Plug 'HerringtonDarkholme/yats.vim'         		" Typescript syntax highlighting
-" Plug 'mxw/vim-jsx'                          		" ReactJS JSX syntax highlighting
-Plug 'peitalin/vim-jsx-typescript'				
+Plug 'peitalin/vim-jsx-typescript'		
+Plug 'tpope/vim-commentary'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'othree/javascript-libraries-syntax.vim' 		" Javascript libraries
+Plug 'othree/javascript-libraries-syntax.vim' 	
 Plug 'pangloss/vim-javascript'
 Plug 'honza/dockerfile.vim'
 Plug 'ap/vim-css-color'
-Plug 'vim-syntastic/syntastic'										" Syntastic is a syntax checking plugin
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 
 " === Utilities === "
-" Plug 'folke/which-key.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'												" tree explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'							" git status in nerdtree
 Plug 'simnalamburt/vim-mundo'               		" undo tree
 Plug 'tpope/vim-commentary'	 										" comment out/in lines (gcc || gc)
-Plug 'github/copilot.vim'                           " github copilot
+" disable copilot
+"	Plug 'github/copilot.vim'                           " github copilot
 
-" Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'            " highlights yanks
 
 "=== Formatting === "
@@ -66,10 +63,9 @@ Plug 'mhartington/oceanic-next'
 Plug 'junegunn/seoul256.vim'   
 Plug 'dracula/vim'						
 Plug 'gf3/molotov'
-Plug 'kyoz/purify', { 'rtp': 'vim' } 						" https://github.com/kyoz/purify/tree/master/vim
- 
+Plug 'kyoz/purify', { 'rtp': 'vim' } 
+Plug 'folke/tokyonight.nvim' 
 " === Icons === "
 Plug 'ryanoasis/vim-devicons'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()

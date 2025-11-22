@@ -211,21 +211,6 @@ map <C-w> :WhichKey<CR>
 " :WhichKey <leader> v " show all <leader> mappings for VISUAL mode
 " :WhichKey '' v " show ALL mappings for VISUAL mode
 
-
-""""""""""""""""""""""""
-" === SYNTASTIC ==== "
-""""""""""""""""""""""""
-
-" :help syntastic-checkers
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " End Plugins settings:CocList marketplace
 """"""""""""""""""""""""""""""""""""""""""""""""""""
