@@ -11,6 +11,7 @@ alias e="exit"
 alias j="jobs"
 alias mkd="mkdir -v"
 alias ca="bat --style=plain --theme='Visual Studio Dark+' --pager=never"
+alias catt="bat"
 alias untar='tar xvf'
 ## LIST
 alias l="eza -lah --sort=Name"
@@ -31,7 +32,7 @@ alias shellformat="shfmt" # requires pkg 'shfmt'
 alias npm-list-globals="npm list -g --depth=0"
 alias gd="goodreads"
 alias agp='ag --pager="less -XFR"'
-
+alias fcmd='compgen -c | fzf'
 # OMZ
 alias edit-zshrc="vim ~/.zshrc"
 alias edit-zsh-local="vim $HOME/z-stuff/zsh.local"
