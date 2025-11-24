@@ -1,7 +1,22 @@
 
-n.n.n / 2025-07-27
+n.n.n / 2025-11-24
 ==================
 
+  * Changes to be committed: 	modified:   .gitconfig 	modified:   books2025.txt
+  * updated .gitignore file
+  * he speaks very highly of you
+  * updated nvim config, theme and cleaned plugins
+  * Changes to be committed: 	new file:   .config/bat/config 	modified:   .gitignore 	modified:   books2025.txt 	modified:   zsh.local
+  * updates to nvim config
+  * termux config files
+  * in a forrest glade
+  * jomen visst då
+  * he swung
+  * update ignore file
+  * nobody cares that charlie gordon was a genius
+  * oh wee
+  * ...
+  * the scaled creature held a creature a drink with a purple umbrella
   * at the edge of the system
   * it did not tickle
   * thats such a cliche
