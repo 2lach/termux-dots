@@ -105,6 +105,3 @@ options = --highlight --line-numbers
 helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
-[credential]
-username = 2lach
-helper = cache --timeout=3600
