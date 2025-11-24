@@ -3,6 +3,7 @@
 .config/configstore/*
 .config/gh/
 .config/netlify/
+.config/nvim/viminfo
 .config/pi/
 .config/private_not_synced_folder
 .config/pulse/
@@ -12,13 +13,16 @@
 .config/z/
 .config/zsh/.zcompdum*
 .config/zsh/.zsh_history
+.gitconfig.local
 .ideas
 .local
 .oh-my-zsh
 .termux/font.ttf
 .termux/termux.d
 .todo
+.vim
 Macdroid/macdroid-export.mdr
+books/*.txt.sorted
 notes
 scripts/.secrets
 scripts/sherlock/
@@ -28,6 +32,3 @@ z-stuff/plugins/web-search/README.md
 z-stuff/plugins/z/README
 z-stuff/plugins/z/README.md
 z-stuff/system_updated.txt
-books/*.txt.sorted
-.config/nvim/viminfo
-.vim
