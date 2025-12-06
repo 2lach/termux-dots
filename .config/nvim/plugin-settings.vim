@@ -169,20 +169,29 @@ let g:neoformat_javascriptreact_prettier = {
 	\ 'stdin': 1,
 	\ }
 
-
+" enable yamlfmt
 let g:neoformat_vim_vimscriptformatter = {
 	\ 'exe': 'VimscriptFormatter',
 	\ 'args': ['--stdin', '--stdin-filepath', '"%:VimscriptFormatter"'],
 	\ 'stdin': 1,
 	\ }
 
+let g:neoformat_yaml_yamlfmt = {
+      \ 'exe': 'yamlfmt',
+      \ 'args': ['-w', '--stdin'],
+      \ 'stdin': 1,
+      \ }
+
+" only on yamlfiles
+let g:neoformat_enabled_yaml = ['yamlfmt']
+
 " enable shfmt
 let g:shfmt_opt="-ci"
 
-" format on save
+" format on save, yamlfiles excluded
 augroup fmt
-	autocmd!
-	autocmd BufWritePre * undojoin | Neoformat
+    autocmd!
+    autocmd BufWritePre * if &filetype !=# 'yaml' | undojoin | Neoformat | endif
 augroup END
 
 """"""""""""""""""""""""

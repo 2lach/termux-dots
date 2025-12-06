@@ -32,7 +32,7 @@ Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 
 " === Utilities === "
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { '' }     " fix termux path
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'												" tree explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'							" git status in nerdtree
