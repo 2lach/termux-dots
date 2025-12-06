@@ -1,0 +1,50 @@
+name: ShellCheck & Format
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  shellcheck:
+    name: ShellCheck & Format
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # 1. Checkout code
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 2. Install tools
+      - name: Install ShellCheck and shfmt
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck shfmt
+
+      # 3. Find all relevant shell scripts
+      - name: Find shell scripts
+        id: find_scripts
+        run: |
+          echo "Searching for shell scripts..."
+          files=$(find . -type f -name "*.sh" ! -path "./.git/*")
+          echo "files=$files" >> $GITHUB_OUTPUT
+
+      # 4. Run ShellCheck (warnings only, don't fail workflow)
+      - name: Run ShellCheck
+        run: |
+          if [ -n "${{ steps.find_scripts.outputs.files }}" ]; then
+            echo "${{ steps.find_scripts.outputs.files }}" | xargs shellcheck -f gcc || true
+          else
+            echo "No shell scripts found"
+          fi
+
+      # 5. Optional: Auto-format with shfmt
+      - name: Format shell scripts
+        run: |
+          if [ -n "${{ steps.find_scripts.outputs.files }}" ]; then
+            echo "${{ steps.find_scripts.outputs.files }}" | xargs shfmt -w
+          fi
