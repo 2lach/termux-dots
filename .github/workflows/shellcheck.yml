@@ -15,36 +15,36 @@ jobs:
     permissions:
       contents: read
     steps:
-      # 1. Checkout code
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      # 2. Install tools
-      - name: Install ShellCheck and shfmt
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y shellcheck shfmt
+      # Install shfmt only if you want auto-formatting
+      - name: Install shfmt
+        run: sudo apt-get update && sudo apt-get install -y shfmt
 
-      # 3. Find all relevant shell scripts
-      - name: Find shell scripts
-        id: find_scripts
+      - name: Get new or modified shell scripts
+        id: modified_files
         run: |
-          echo "Searching for shell scripts..."
-          files=$(find . -type f -name "*.sh" ! -path "./.git/*")
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            files=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep '\.sh$' || true)
+          else
+            files=$(git diff --name-only HEAD~1 HEAD | grep '\.sh$' || true)
+          fi
           echo "files=$files" >> $GITHUB_OUTPUT
+          echo "Found shell scripts: $files"
 
-      # 4. Run ShellCheck (warnings only, don't fail workflow)
       - name: Run ShellCheck
         run: |
-          if [ -n "${{ steps.find_scripts.outputs.files }}" ]; then
-            echo "${{ steps.find_scripts.outputs.files }}" | xargs shellcheck -f gcc || true
+          if [ -n "${{ steps.modified_files.outputs.files }}" ]; then
+            echo "${{ steps.modified_files.outputs.files }}" | xargs shellcheck -f gcc || true
           else
-            echo "No shell scripts found"
+            echo "No modified shell scripts found"
           fi
 
-      # 5. Optional: Auto-format with shfmt
       - name: Format shell scripts
         run: |
-          if [ -n "${{ steps.find_scripts.outputs.files }}" ]; then
-            echo "${{ steps.find_scripts.outputs.files }}" | xargs shfmt -w
+          if [ -n "${{ steps.modified_files.outputs.files }}" ]; then
+            echo "${{ steps.modified_files.outputs.files }}" | xargs shfmt -w
           fi
