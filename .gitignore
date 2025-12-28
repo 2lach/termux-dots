@@ -25,6 +25,7 @@ Macdroid/macdroid-export.mdr
 books/*.txt.sorted
 notes
 scripts/.secrets
+scripts/encrypt_file.sh
 scripts/sherlock/
 scripts/test.sh
 z-stuff/plugins/common-aliases/README.md

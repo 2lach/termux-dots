@@ -21,18 +21,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " === Syntax === "
 Plug 'sheerun/vim-polyglot'							" syntax highlighting for almost *
-Plug 'peitalin/vim-jsx-typescript'		
-Plug 'tpope/vim-commentary'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'othree/javascript-libraries-syntax.vim' 	
-Plug 'pangloss/vim-javascript'
 Plug 'honza/dockerfile.vim'
-Plug 'ap/vim-css-color'
-Plug 'Shougo/neco-vim'
-Plug 'neoclide/coc-neco'
 
 " === Utilities === "
-Plug 'junegunn/fzf', { 'do': { '' }     " fix termux path
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'												" tree explorer
 Plug 'Xuyuanp/nerdtree-git-plugin'							" git status in nerdtree
@@ -63,7 +55,6 @@ Plug 'mhartington/oceanic-next'
 Plug 'junegunn/seoul256.vim'   
 Plug 'dracula/vim'						
 Plug 'gf3/molotov'
-Plug 'kyoz/purify', { 'rtp': 'vim' } 
 Plug 'folke/tokyonight.nvim' 
 " === Icons === "
 Plug 'ryanoasis/vim-devicons'

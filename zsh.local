@@ -297,6 +297,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 . $HOME/z-stuff/scripts/auto-ls.zsh
 . $HOME/z-stuff/scripts/.secrets
 . $HOME/z-stuff/scripts/man-colors.sh
+#. $HOME/z-stuff/scripts/encrypt_file.sh
 
 # netlify cli
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
