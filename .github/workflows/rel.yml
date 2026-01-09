@@ -1,0 +1,106 @@
+name: Release dotfiles
+
+on:
+  workflow_run:
+    workflows: ["Devskim"]
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0   # krävs för git diff + tags
+
+      - name: Set Git identity
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Check if dotfiles changed
+        id: changes
+        run: |
+          BEFORE="${{ github.event.workflow_run.before }}"
+          AFTER="${{ github.event.workflow_run.head_sha }}"
+
+          echo "Comparing commits:"
+          echo "  BEFORE: $BEFORE"
+          echo "  AFTER : $AFTER"
+
+          changed_files=$(git diff --name-only "$BEFORE" "$AFTER")
+
+          echo "Changed files:"
+          echo "$changed_files"
+
+          # Tillåt endast faktiska dotfiles / config
+          relevant_files=$(echo "$changed_files" | grep -E \
+            '^(\.zshrc|\.bashrc|\.profile|\.vimrc|\.gitconfig|\.config/|bin/|scripts/)' || true)
+
+          echo "Relevant dotfiles:"
+          echo "$relevant_files"
+
+          if [ -z "$relevant_files" ]; then
+            echo "No relevant dotfiles changed → skipping release"
+            echo "release_needed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Dotfiles changed → release required"
+            echo "release_needed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Stop if no release is needed
+        if: steps.changes.outputs.release_needed != 'true'
+        run: |
+          echo "Only documentation or non-dotfiles changed. Exiting."
+          exit 0
+
+      - name: Get latest tag
+        id: get_tag
+        run: |
+          git fetch --tags
+          latest=$(git tag --sort=-v:refname | head -n1)
+          latest=${latest:-v0.0.0}
+          echo "latest=$latest" >> $GITHUB_OUTPUT
+          echo "Latest tag: $latest"
+
+      - name: Bump patch version
+        id: bump
+        run: |
+          version="${{ steps.get_tag.outputs.latest }}"
+          version="${version#v}"
+
+          IFS='.' read -r major minor patch <<< "$version"
+          major=${major:-0}
+          minor=${minor:-0}
+          patch=${patch:-0}
+
+          patch=$((patch + 1))
+          new_tag="v$major.$minor.$patch"
+
+          echo "new_tag=$new_tag" >> $GITHUB_OUTPUT
+          echo "New version: $new_tag"
+
+      - name: Create Git tag
+        run: |
+          git tag -a "${{ steps.bump.outputs.new_tag }}" \
+            -m "Release ${{ steps.bump.outputs.new_tag }}"
+          git push origin "${{ steps.bump.outputs.new_tag }}"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.bump.outputs.new_tag }}
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
