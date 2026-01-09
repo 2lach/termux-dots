@@ -22,7 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # krävs för git diff + tags
+          fetch-depth: 0
 
       - name: Set Git identity
         run: |
@@ -32,31 +32,36 @@ jobs:
       - name: Check if dotfiles changed
         id: changes
         run: |
-          BEFORE="${{ github.event.workflow_run.before }}"
           AFTER="${{ github.event.workflow_run.head_sha }}"
+          BEFORE="${{ github.event.workflow_run.before }}"
 
-          echo "Comparing commits:"
-          echo "  BEFORE: $BEFORE"
-          echo "  AFTER : $AFTER"
+          if [ -z "$BEFORE" ]; then
+            echo "No BEFORE sha provided by workflow_run, falling back to HEAD~1"
+            RANGE="HEAD~1..HEAD"
+          else
+            RANGE="$BEFORE..$AFTER"
+          fi
 
-          changed_files=$(git diff --name-only "$BEFORE" "$AFTER")
+          echo "Diff range: $RANGE"
+
+          changed_files=$(git diff --name-only "$RANGE")
 
           echo "Changed files:"
           echo "$changed_files"
 
-          # Tillåt endast faktiska dotfiles / config
+          # Dotfiles with file extension (ignore .md, .txt and files without extension)
           relevant_files=$(echo "$changed_files" | grep -E \
-            '^(\.zshrc|\.bashrc|\.profile|\.vimrc|\.gitconfig|\.config/|bin/|scripts/)' || true)
+            '^(\.zshrc|\.bashrc|\.profile|\.vimrc|\.gitconfig|\.config/|bin/|scripts/).*\.[^./]+$' || true)
 
           echo "Relevant dotfiles:"
           echo "$relevant_files"
 
           if [ -z "$relevant_files" ]; then
+            echo "release_needed=false" >> "$GITHUB_OUTPUT"
             echo "No relevant dotfiles changed → skipping release"
-            echo "release_needed=false" >> $GITHUB_OUTPUT
           else
+            echo "release_needed=true" >> "$GITHUB_OUTPUT"
             echo "Dotfiles changed → release required"
-            echo "release_needed=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Stop if no release is needed
@@ -71,7 +76,7 @@ jobs:
           git fetch --tags
           latest=$(git tag --sort=-v:refname | head -n1)
           latest=${latest:-v0.0.0}
-          echo "latest=$latest" >> $GITHUB_OUTPUT
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
           echo "Latest tag: $latest"
 
       - name: Bump patch version
@@ -88,7 +93,7 @@ jobs:
           patch=$((patch + 1))
           new_tag="v$major.$minor.$patch"
 
-          echo "new_tag=$new_tag" >> $GITHUB_OUTPUT
+          echo "new_tag=$new_tag" >> "$GITHUB_OUTPUT"
           echo "New version: $new_tag"
 
       - name: Create Git tag
