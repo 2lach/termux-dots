@@ -1,6 +1,8 @@
 # Termux dotfiles
 ### 2lach termux dotfiles
 [![CodeFactor](https://www.codefactor.io/repository/github/2lach/termux-dots/badge/master)](https://www.codefactor.io/repository/github/2lach/termux-dots/overview/master)
+[![CodeQL](https://github.com/2lach/termux-dots/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/2lach/termux-dots/actions/workflows/github-code-scanning/codeql)
+
 ```sh
 enviroment: android (arch linux) and termux
 shell: zsh, oh my zsh (bash and fish is secondary)
