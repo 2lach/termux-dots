@@ -149,7 +149,6 @@ let g:neoformat_run_all_formatters = 1
 
 " Have Neoformat only msg when there is an error
 " let g:neoformat_only_msg_on_error = 1
-
 let g:neoformat_xml_tidy = {
 	\ 'exe': 'tidy',
 	\ 'args': ['-quiet',
@@ -169,7 +168,6 @@ let g:neoformat_javascriptreact_prettier = {
 	\ 'stdin': 1,
 	\ }
 
-" enable yamlfmt
 let g:neoformat_vim_vimscriptformatter = {
 	\ 'exe': 'VimscriptFormatter',
 	\ 'args': ['--stdin', '--stdin-filepath', '"%:VimscriptFormatter"'],
@@ -178,11 +176,10 @@ let g:neoformat_vim_vimscriptformatter = {
 
 let g:neoformat_yaml_yamlfmt = {
       \ 'exe': 'yamlfmt',
-      \ 'args': ['-w', '--stdin'],
+      \ 'args': ['--stdin'],
       \ 'stdin': 1,
       \ }
 
-" only on yamlfiles
 let g:neoformat_enabled_yaml = ['yamlfmt']
 
 " enable shfmt
