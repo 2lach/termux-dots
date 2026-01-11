@@ -1,0 +1,1 @@
+[ -r /data/data/com.termux/files/usr/share/byobu/profiles/bashrc ] && . /data/data/com.termux/files/usr/share/byobu/profiles/bashrc  #byobu-prompt#
