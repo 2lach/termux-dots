@@ -205,11 +205,7 @@ function system_update() {
 	feco "UPDATE PIPS"
 	pip_pkg_update
 	pip cache purge
-
-	#	feco "UPDATE GEMS"
-	#	gem outdated
-	#	gem update
-	#	gem cleanup
+	pipx upgrade-all
 
 	feco "UPDATE OMZ"
 	omz update
@@ -222,7 +218,7 @@ function system_update() {
 function howdoi() {
 	if [[ -z $@ ]]; then
 		$(which hors) --help
-		echo 'wat you wanna know?'
+		echo 'what do you want know?'
 	else
 		$(which hors) "$@" -a -n 3 -p never
 	fi
@@ -300,5 +296,20 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 # fzf finder
 [ -f ~/.config/fzf/.fzf.zsh ] && source ~/.config/fzf/.fzf.zsh
+
+# Random Linux tldr tip at shell startup between 15-23
+show_random_tldr() {
+	TLDR_LINUX_DIR="$HOME/.config/tealdeer/.tealdeer-cache/tldr-pages/pages.en/linux"
+	local hour
+	hour=$(date +%H)
+
+	if [ -d "$TLDR_LINUX_DIR" ] &&
+		[ "$hour" -ge 15 ] &&
+		[ "$hour" -lt 23 ]; then
+		tldr --quiet "$(ls "$TLDR_LINUX_DIR" | sed 's/\.md$//' | shuf -n1)"
+	fi
+}
+
+# show_random_tldr
 
 ##########################

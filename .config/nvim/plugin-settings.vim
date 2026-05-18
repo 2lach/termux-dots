@@ -184,6 +184,8 @@ let g:neoformat_enabled_yaml = ['yamlfmt']
 
 " enable shfmt
 let g:shfmt_opt="-ci"
+" Enable trimmming of trailing whitespac  e globally
+let g:neoformat_basic_format_trim = 1
 
 " format on save, yamlfiles excluded
 augroup fmt
