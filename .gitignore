@@ -1,4 +1,5 @@
 .config/Bitwarden CLI/
+.config/byobu/.welcome-displayed
 .config/cache/
 .config/configstore/*
 .config/gh/
@@ -19,9 +20,12 @@
 .oh-my-zsh
 .termux/font.ttf
 .termux/termux.d
+.termux/archived/*
+.termux/archived/colors.properties
 .todo
 .vim
 Macdroid/macdroid-export.mdr
+archived/colors.properties.bak
 books/*.txt.sorted
 notes
 scripts/.secrets
