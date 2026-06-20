@@ -1,41 +1,47 @@
-" 
-" Neovim config of
+"""""""""""""""""""""""""""""""""""
+"   Neovim config of
 " 	Stefan Lachmann
-" 	@2lach 
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 	@2lach
+"""""""""""""""""""""""""""""""""""
 " Plugins (using vim-plug)
 source ~/.config/nvim/plugins.vim
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""
 " setup directories
-"""""""""""""""""""
-
+"""""""""""""""""""""""""""""""""""
 silent !mkdir -p ~/.config/nvim/_backup ~/.config/nvim/_temp ~/.config/nvim/_undo
-set backupdir=~/.config/nvim/_backup    " where to put backup files
-set directory=~/.config/nvim/_temp      " where to put swap files
-set undodir=~/.config/nvim/_undo        " where to save undo histories
+set backupdir=~/.config/nvim/_backup " where to put backup files
+set directory=~/.config/nvim/_temp
+" where to put swap files
+set undodir=~/.config/nvim/_undo
+" where to save undo histories
 " keep viminfo file in .vim dir
 set viminfo+=n~/.config/nvim/viminfo
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""
 " Settings
-""""""""""
-
-set clipboard+=unnamedplus              " use system clipboard
-" set shortmess=at                        " Abbr mess +truncate when necessary
-set encoding=utf-8 nobomb               " Use UTF-8 without BOM
-
+""""""""""""""""""""""""""""""""""""
+set clipboard+=unnamedplus
+" use system clipboard
+" set shortmess=at
+" Abbr mess +truncate when necessary
+set encoding=utf-8 nobomb
+" Use UTF-8 without BOM
 set number
-set rnu                                 " set relative number
-set ruler                               " show ruler
-set cursorline                          " Highlight cursorline
-set showcmd                             " show cmdline input 
-set wrap                                " handle long lines nicely.
+set rnu
+" set relative number
+set ruler
+" show ruler
+set cursorline
+" Highlight cursorline
+set showcmd
+" show cmdline input
+set wrap
+" handle long lines nicely.
 
-set shiftwidth=2                        " an autoindent is two spaces
-set tabstop=2                           " Make tabs as wide as two spaces
+set shiftwidth=2
+" an autoindent is two spaces
+set tabstop=2
+" Make tabs as wide as two spaces
 set modeline                            " Respect modeline in files
 set modelines=4
 
@@ -47,9 +53,8 @@ set shell=$SHELL                        " current shell
 set backspace=indent,eol,start          " Allow backspace in insert mode
 
 set undofile
-set undolevels=1000                     " How many undos
-set undoreload=10000                    " number of lines to save for undo
-
+set undolevels=1000                    " How many undos
+set undoreload=10000                   " number of lines to save for undo
 set cmdheight=2                         " commandline window
 
 "Tab in cmdline shows menu with buffers and filenames
@@ -57,18 +62,18 @@ set cmdheight=2                         " commandline window
 set laststatus=2                        " Always show status line
 set showmode                            " Show the current mode
 
-if has('mouse')                         " enable mouse 
+if has('mouse')                         " enable mouse
 	set mouse=a
 endif
 
 " mode based cursor shape "
 set guicursor=n-v:block-nCursor             " block in normal
-set guicursor=r:block20-lCursor-blinkon250  " vertical in insert 
+set guicursor=r:block20-lCursor-blinkon250  " vertical in insert
 " blinking block in replace
 set guicursor=i-ci:ver30-iCursor-blinkwait300-blinkon250-blinkoff250
 
 syntax on                                " Enable syntax highlighting
-set hidden                               " Allow backgrounding buffers 
+set hidden                               " Allow backgrounding buffers
 set title                                " Show the filename in the window titlebar
 
 " colorscheme
@@ -78,7 +83,7 @@ endif
 colorscheme tokyonight-moon
 " colorscheme molotov
 " colorscheme seoul256
-" colorscheme OceanicNext 
+" colorscheme OceanicNext
 " colorscheme dracula
 """""""""""""""""""""""""""""""""""""
 
@@ -99,7 +104,7 @@ let g:ruby_host_prog='/data/data/com.termux/files/usr/bin/ruby'
 let g:go_host_prog='/data/data/com.termux/files/usr/bin/go'
 
 autocmd BufWritePre *.py,*.yaml,*.yml,*.go,Dockerfile,*.json :CocCommand editor.action.formatDocument
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""
 " === Neoformat === "
@@ -128,7 +133,7 @@ let g:neoformat_xml_tidy = {
 	\ 'stdin': 1,
 	\ }
 
-" format  on save with cpc.nvim + coc-prettier 
+" format  on save with cpc.nvim + coc-prettier
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 augroup fmt
@@ -147,7 +152,7 @@ let g:mundo_right = 1
 """""""""""""""""""""""
 " === Vim airline === "
 """""""""""""""""""""""
-" show tabline 
+" show tabline
 let g:airline#extensions#tabline#enabled = 1            " show open tabs
 let g:airline#extensions#coc#enabled = 1                " show coc diagnostics
 
@@ -168,7 +173,7 @@ let g:highlightedyank_highlight_duration = 550
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Keymaps / Keybindings 
+" Keymaps / Keybindings
 """""""""""""""""""""""
 
 let mapleader = ','
@@ -188,7 +193,7 @@ nmap <space>w :write<CR>
 nmap <space>s :source %<CR>
 
 " exit search hightlight
-noremap <space><space> :set hlsearch! hlsearch?<cr> 
+noremap <space><space> :set hlsearch! hlsearch?<cr>
 
 " Ctrl + x/z move between Buffers prev/next
 nnoremap<C-x> :bnext<CR>
@@ -203,7 +208,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
-" Fixes & autocmds 
+" Fixes & autocmds
 """""""""""""""""""
 
 " Reload icons after init source

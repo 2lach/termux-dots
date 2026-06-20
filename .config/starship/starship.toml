@@ -10,10 +10,9 @@ right_format = """$time"""
 
 # Inserts a blank line between shell prompts
 add_newline = true
-
-[character]       
-# Replace the "❯" symbol in the prompt with "➜"
-success_symbol = "[»](bold green)"
+#  »  ᗒ
+[character]
+success_symbol = "[ᗌ](bold green)"
 error_symbol = "[➤](bold lightgreen)"
 
 # with custom vim shape

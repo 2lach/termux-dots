@@ -224,9 +224,11 @@ function howdoi() {
 	fi
 }
 BOOKSLIST=$HOME/z-stuff/dots/books2026.txt
+
 function add-new_book() {
 	nvim $BOOKSLIST
 }
+alias anb=add-new_book
 
 function get-last-read-book() {
 	cat $BOOKSLIST | tail -n1
@@ -254,6 +256,14 @@ function system_update_log() {
 	# prints system updated logfile
 	cat $SYSTEM_LOG
 
+}
+
+function realp() {
+	if [ -z "$1" ]; then
+		realpath .
+		return
+	fi
+	realpath "$@"
 }
 
 function date_format() {

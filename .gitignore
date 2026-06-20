@@ -9,6 +9,7 @@
 .config/private_not_synced_folder
 .config/pulse/
 .config/rc-files
+.config/rclone/rclone.conf
 .config/tabtab/
 .config/todo.sh/
 .config/z/
@@ -18,10 +19,10 @@
 .ideas
 .local
 .oh-my-zsh
-.termux/font.ttf
-.termux/termux.d
 .termux/archived/*
 .termux/archived/colors.properties
+.termux/font.ttf
+.termux/termux.d
 .todo
 .vim
 Macdroid/macdroid-export.mdr

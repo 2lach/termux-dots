@@ -1,7 +1,8 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""
 " Plugins
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  auto-install vim-plug (if not already installed)
+"""""""""""""""""""""""""""""""""
+
+" auto-install vim-plug
 if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
 	silent !curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs
 		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -17,46 +18,50 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Autocomplete
-" Plug 'ycm-core/YouCompleteMe' 				" to heavy and works so - so
 
 " === Syntax === "
-Plug 'sheerun/vim-polyglot'							" syntax highlighting for almost *
+Plug 'sheerun/vim-polyglot'
 Plug 'honza/dockerfile.vim'
 
 " === Utilities === "
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'												" tree explorer
-Plug 'Xuyuanp/nerdtree-git-plugin'							" git status in nerdtree
-Plug 'simnalamburt/vim-mundo'               		" undo tree
-Plug 'tpope/vim-commentary'	 										" comment out/in lines (gcc || gc)
-" disable copilot
-"	Plug 'github/copilot.vim'                           " github copilot
-
-Plug 'machakann/vim-highlightedyank'            " highlights yanks
+Plug 'preservim/nerdtree'
+" tree explorer
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" git status in nerdtree
+Plug 'simnalamburt/vim-mundo'
+" undo tree
+Plug 'tpope/vim-commentary'
+" comment out/in lines (gcc || gc)
+Plug 'machakann/vim-highlightedyank'
+" highlights yanks
 
 "=== Formatting === "
-Plug 'sbdchd/neoformat' 												" formatting for all the different file types | https://github.com/sbdchd/neoformat
+Plug 'sbdchd/neoformat'
+" formatting for all the different file types | https://github.com/sbdchd/neoformat
 Plug 'rbtnn/vim-vimscript_formatter' 						" vim script formatter
 
 " === Git === "
-Plug 'airblade/vim-gitgutter'										" show changes on line in the gutter
-Plug 'tpope/vim-fugitive'												" https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt
+Plug 'airblade/vim-gitgutter'
+" show changes on line in the gutter
 
-" === Airline Plugins === 
-Plug 'vim-airline/vim-airline'            			  " Customized vim status line 
-Plug 'vim-airline/vim-airline-themes'     			  " https://github.com/vim-airline/vim-airline-themes
+Plug 'tpope/vim-fugitive'
+" https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt
+
+" === Airline Plugins ===
+Plug 'vim-airline/vim-airline'            			  " Customized vim status line
+Plug 'vim-airline/vim-airline-themes'" https://github.com/vim-airline/vim-airline-themes
 
 " === UI === "
-Plug 'junegunn/limelight.vim'            				  " Focus-writing
+Plug 'junegunn/limelight.vim'        " Focus-writing
 
 " Themes/Colorscheme
-Plug 'mhartington/oceanic-next' 
-Plug 'junegunn/seoul256.vim'   
-Plug 'dracula/vim'						
+Plug 'mhartington/oceanic-next'
+Plug 'junegunn/seoul256.vim'
+Plug 'dracula/vim'
 Plug 'gf3/molotov'
-Plug 'folke/tokyonight.nvim' 
+Plug 'folke/tokyonight.nvim'
 " === Icons === "
 Plug 'ryanoasis/vim-devicons'
-
 call plug#end()
