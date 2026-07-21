@@ -35,20 +35,21 @@ alias fcmd='compgen -c | fzf'
 alias edit-zshrc="nvim ~/.zshrc"
 alias edit-zsh-local="nvim $HOME/z-stuff/zsh.local"
 alias edit-ohmyzsh="nvim ~/.oh-my-zsh"
+alias tetris="bastet"
 
 # PYTHON
 alias pip2="/data/data/com.termux/files/usr/bin/pip"
 alias pip="/data/data/com.termux/files/usr/bin/pip3"
 alias pip-search="pip_search"
 alias py="python"
-# pip search options:
-# pip_search -s name
-# pip_search -s version
-# pip_search -s released
 
 ##########################
 # FUNCTIONS
 ##########################
+function zshEdit() {
+	nvim $HOME/z-stuff/zsh.local
+}
+
 function vimrc() {
 	nvim $HOME/.vimrc
 }
@@ -156,6 +157,20 @@ function compress() {
 	[ -n "$1" ] && tar cf - "$1" | pigz -9 -p 32 >"$1".tar.gz && printf "\n parrallel gzip (🐷igz) finished"
 }
 
+rm_from_file() {
+	local list="$1"
+
+	if [[ -z "$list" || ! -f "$list" ]]; then
+		echo "Usage: rm_from_file <fil med sökvägar, en per rad>" >&2
+		return 1
+	fi
+
+	while IFS= read -r item; do
+		[[ -z "$item" ]] && continue
+		rm -rfv -- "$item"
+	done <"$list"
+}
+
 function aptu() {
 	# stole this from catalàins dotfiles
 	# works better on ubuntu/debian then on termux
@@ -207,22 +222,20 @@ function system_update() {
 	pip cache purge
 	pipx upgrade-all
 
-	feco "UPDATE OMZ"
-	omz update
-	feco "omz update completed"
+	feco "UPDATE ANTIDOTE"
+	antidote list
+	antidote update
+	feco "ANTIDOTE UPDATE COMPLETED"
 
 	add_system_update_datestamp
-	feco "system update completed"
+	feco "SYSTEM UPDATE COMPLETED"
+}
+alias uu=system_update
+
+function termux-commands() {
+	$(which bat) $HOME/.termux/termux.commands.md
 }
 
-function howdoi() {
-	if [[ -z $@ ]]; then
-		$(which hors) --help
-		echo 'what do you want know?'
-	else
-		$(which hors) "$@" -a -n 3 -p never
-	fi
-}
 BOOKSLIST=$HOME/z-stuff/dots/books2026.txt
 
 function add-new_book() {

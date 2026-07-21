@@ -13,7 +13,7 @@ add_newline = true
 #  »  ᗒ
 [character]
 success_symbol = "[ᗌ](bold green)"
-error_symbol = "[➤](bold lightgreen)"
+error_symbol = "[➤](bold gray)"
 
 # with custom vim shape
 vicmd_symbol = "[V](bold green) "

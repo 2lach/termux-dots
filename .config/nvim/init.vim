@@ -20,10 +20,12 @@ set viminfo+=n~/.config/nvim/viminfo
 """"""""""""""""""""""""""""""""""""
 " Settings
 """"""""""""""""""""""""""""""""""""
+" use System clipboard
 set clipboard+=unnamedplus
-" use system clipboard
-" set shortmess=at
+
 " Abbr mess +truncate when necessary
+set shortmess=at
+
 set encoding=utf-8 nobomb
 " Use UTF-8 without BOM
 set number
