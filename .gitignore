@@ -22,6 +22,7 @@
 .termux/archived/*
 .termux/archived/colors.properties
 .termux/font.ttf
+.termux/termux.commands.md
 .termux/termux.d
 .todo
 .vim
