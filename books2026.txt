@@ -107,3 +107,6 @@ The Lives Of Tao, Book 1
 
 ## James islington
 The will of the many
+
+## Daniel Suarez
+Daemon
